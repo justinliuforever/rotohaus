@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+
+/* FZFengRuSong font */
+@font-face {
+  font-family: 'FZFengRuSong';
+  src: url('/fonts/FZFengRSTJW-L.TTF') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'FZFengRuSong';
+  src: url('/fonts/FZFengRSTJW-R.TTF') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'FZFengRuSong';
+  src: url('/fonts/FZFengRSTJW-M.TTF') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'FZFengRuSong';
+  src: url('/fonts/FZFengRSTJW-DB.TTF') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'FZFengRuSong';
+  src: url('/fonts/FZFengRSTJW-B.TTF') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'FZFengRuSong';
+  src: url('/fonts/FZFengRSTJW-EB.TTF') format('truetype');
+  font-weight: 800;
+}
+
+/* Huiwen Fangsong font */
+@font-face {
+  font-family: 'Huiwen-Fangsong';
+  src: url('/fonts/Huiwen-Fangsong.ttf') format('truetype');
+  font-weight: 500;
+}
+
+:root {
+  --color-primary: #476724;
+  --color-gold: #E2D19E;
+  --color-cream: rgba(255, 244, 212, 0.64);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Paper texture with noise */
+.paper-texture {
+  position: relative;
+}
+.paper-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Ink blur effect */
+.ink-blur {
+  filter: blur(0.5px);
+  text-shadow:
+    0 0 20px currentColor,
+    0 0 40px rgba(0,0,0,0.1);
+}
+
+/* Hand-drawn underline */
+.hand-drawn-underline {
+  position: relative;
+  display: inline-block;
+}
+.hand-drawn-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.3;
+  transform: rotate(-0.5deg) scaleX(1.02);
+  border-radius: 2px;
+}
+
+/* Rough edge mask */
+.rough-edge {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='2' y='2' width='96' height='96' rx='8' fill='white'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+}
+
+/* Parallax container */
+.parallax-container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(0.5deg); }
+  75% { transform: translateY(5px) rotate(-0.5deg); }
+}
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Ink spread animation */
+@keyframes ink-spread {
+  0% { transform: scale(0.8); opacity: 0; filter: blur(10px); }
+  100% { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+.ink-spread {
+  animation: ink-spread 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scroll reveal animation */
+@keyframes scroll-reveal {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4b896;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a69a78;
+}
