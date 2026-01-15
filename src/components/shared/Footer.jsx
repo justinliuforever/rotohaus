@@ -37,7 +37,7 @@ const Footer = () => {
             <motion.img
               whileHover={{ rotate: 5, scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              src="/images/intro/logo.png"
+              src="/images/residency/intro/logo.png"
               alt="Rotohaus"
               className="w-16 h-16 mb-6 brightness-0 invert opacity-80"
             />

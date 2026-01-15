@@ -16,7 +16,6 @@ const HeroSection = () => {
       ref={containerRef}
       className="relative min-h-screen bg-[#476724] overflow-hidden"
     >
-      {/* Parallax background */}
       <motion.div
         style={{ y: backgroundY }}
         className="absolute inset-0"
@@ -24,7 +23,7 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: `url('/images/backgrounds/cover-bg.svg')`,
+            backgroundImage: `url('/images/residency/backgrounds/cover-bg.svg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             mixBlendMode: 'multiply'
@@ -33,7 +32,6 @@ const HeroSection = () => {
         <div className="paper-texture absolute inset-0" />
       </motion.div>
 
-      {/* Breathing glow effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
           animate={{
@@ -65,7 +63,6 @@ const HeroSection = () => {
         style={{ opacity: contentOpacity }}
         className="relative z-10 min-h-screen flex flex-col lg:flex-row"
       >
-        {/* Main visual */}
         <div className="flex-1 relative flex items-center justify-center p-8 lg:p-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
@@ -76,13 +73,12 @@ const HeroSection = () => {
             <div
               className="w-full aspect-[4/3] rounded-lg shadow-2xl shadow-black/30"
               style={{
-                backgroundImage: `linear-gradient(0deg, rgba(96, 62, 0, 0.12), rgba(96, 62, 0, 0.12)), url('/images/cover-main.png')`,
+                backgroundImage: `linear-gradient(0deg, rgba(96, 62, 0, 0.12), rgba(96, 62, 0, 0.12)), url('/images/residency/cover-main.png')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             />
 
-            {/* Corner characters with ink effect */}
             <motion.span
               initial={{ opacity: 0, x: -30, filter: 'blur(8px)' }}
               animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
@@ -141,7 +137,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Info section */}
         <div className="flex-1 flex flex-col justify-center p-8 lg:p-16 lg:max-w-[480px]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -280,7 +275,6 @@ const HeroSection = () => {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

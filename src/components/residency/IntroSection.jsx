@@ -29,17 +29,17 @@ const IntroSection = () => {
 
   const locations = [
     {
-      image: '/images/intro/qiongyao-park.png',
+      image: '/images/residency/intro/qiongyao-park.png',
       title: '邛窑国家考古遗址公园',
       titleEn: 'Qiongyao National Archaeological Site Park'
     },
     {
-      image: '/images/intro/jiaguan-town.png',
+      image: '/images/residency/intro/jiaguan-town.png',
       title: '夹关古镇',
       titleEn: 'Jiaguan Ancient Town'
     },
     {
-      image: '/images/intro/landin-fang.png',
+      image: '/images/residency/intro/landin-fang.png',
       title: '临济镇蓝靛坊',
       titleEn: 'Landin Workshop, Linji Town'
     }
@@ -49,7 +49,6 @@ const IntroSection = () => {
     <section ref={containerRef} className="relative bg-white py-24 lg:py-32 overflow-hidden">
       <div className="paper-texture absolute inset-0" />
 
-      {/* Decorative element */}
       <motion.div
         style={{ y: decorY }}
         className="absolute top-20 right-10 lg:right-20 w-20 h-20 opacity-10 pointer-events-none"
@@ -65,7 +64,7 @@ const IntroSection = () => {
             <motion.img
               whileHover={{ rotate: 5, scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              src="/images/intro/logo.png"
+              src="/images/residency/intro/logo.png"
               alt="Rotohaus"
               className="w-16 h-16 lg:w-20 lg:h-20"
             />
@@ -102,7 +101,6 @@ const IntroSection = () => {
           </div>
         </FadeInSection>
 
-        {/* Introduction text */}
         <div className="max-w-4xl mx-auto mb-24 lg:mb-32 space-y-10">
           <FadeInSection>
             <p
@@ -147,7 +145,6 @@ const IntroSection = () => {
           </FadeInSection>
         </div>
 
-        {/* Location cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           <FadeInSection className="lg:col-span-7">
             <motion.div

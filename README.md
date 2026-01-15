@@ -1,35 +1,58 @@
-# ROTOHAUS Residency
+# ROTOHAUS
 
-烟火邛州 - 国际非遗艺术驻地网站
+Art & cultural platform website.
 
-## 启动
+## Getting Started
 
 ```bash
-npm install    # 首次运行
-npm run dev    # 开发模式 → http://localhost:5173
-npm run build  # 生产构建
-npm run preview # 预览生产版本
+npm install     # Install dependencies
+npm run dev     # Dev server → http://localhost:5173
+npm run build   # Production build
+npm run preview # Preview production build
 ```
 
-## 技术栈
+## Tech Stack
 
 - React + Vite
 - Tailwind CSS v4
+- Framer Motion
+- React Router
 
-## 结构
+## Project Structure
 
 ```
 src/
 ├── components/
-│   └── ResidencyCover.jsx  # 封面 section
+│   ├── residency/      # Residency page components
+│   └── shared/         # Shared components
+├── pages/
+│   └── ResidencyPage.jsx
+├── i18n/
 ├── App.jsx
 └── index.css
+
 public/
-└── images/                 # 图片资源
+└── images/
+    └── residency/      # Residency page assets
+
+docs/
+└── RESIDENCY.md        # Residency page documentation
 ```
 
-## 字体
+## Pages
+
+| Route | Status | Description |
+|-------|--------|-------------|
+| `/residency` | ✅ Done | Art Residency Program |
+| `/` | ↪️ Redirect | Redirects to `/residency` |
+| `/dialog` | 🔜 Planned | ROTO Dialog |
+| `/collection` | 🔜 Planned | ROTO Collection |
+| `/experience` | 🔜 Planned | ROTO Experience |
+| `/lab` | 🔜 Planned | ROTO Material Lab |
+
+## Fonts
 
 - Instrument Serif (Google Fonts)
-- Helvetica Neue (系统字体)
-- FZFengRuSongTiS (需要放入 /public/fonts/)
+- Helvetica Neue (System)
+- FZFengRuSong (`/public/fonts/`)
+- Huiwen-Fangsong (`/public/fonts/`)

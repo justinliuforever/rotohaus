@@ -1,6 +1,4 @@
 const ResidencyCover = () => {
-  // 基准尺寸: 792 x 1224
-  // 所有位置转换为百分比以实现响应式
   const BASE_W = 792;
   const BASE_H = 1224;
 
@@ -15,11 +13,10 @@ const ResidencyCover = () => {
         backgroundColor: '#476724'
       }}
     >
-      {/* Background Texture - covers entire section */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url('/images/backgrounds/cover-bg.svg')`,
+          backgroundImage: `url('/images/residency/backgrounds/cover-bg.svg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'plus-darker',
@@ -27,8 +24,6 @@ const ResidencyCover = () => {
         }}
       />
 
-      {/* 右上角标题组 */}
-      {/* 丙午年·春 */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -44,7 +39,6 @@ const ResidencyCover = () => {
         丙午年·春
       </span>
 
-      {/* "烟火邛州" */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -59,7 +53,6 @@ const ResidencyCover = () => {
         "烟火邛州"
       </span>
 
-      {/* 国际非遗艺术驻地 */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -74,8 +67,6 @@ const ResidencyCover = () => {
         国际非遗艺术驻地
       </span>
 
-      {/* 信息栏 - 中国·邛崃 | 驻地时间 | 招募截止 */}
-      {/* 中国·邛崃 */}
       <span
         className="absolute text-white"
         style={{
@@ -90,7 +81,6 @@ const ResidencyCover = () => {
         中国·邛崃
       </span>
 
-      {/* 驻地时间: */}
       <span
         className="absolute text-white/80"
         style={{
@@ -105,7 +95,6 @@ const ResidencyCover = () => {
         驻地时间:
       </span>
 
-      {/* 2026/03/13 - 04/15 */}
       <span
         className="absolute text-white/80"
         style={{
@@ -121,7 +110,6 @@ const ResidencyCover = () => {
         2026/03/13 - 04/15
       </span>
 
-      {/* 招募截止： */}
       <span
         className="absolute text-white/80"
         style={{
@@ -136,7 +124,6 @@ const ResidencyCover = () => {
         招募截止：
       </span>
 
-      {/* 2026/02/14 */}
       <span
         className="absolute text-white/80"
         style={{
@@ -152,7 +139,6 @@ const ResidencyCover = () => {
         2026/02/14
       </span>
 
-      {/* 主视觉图片 */}
       <div
         className="absolute"
         style={{
@@ -166,14 +152,12 @@ const ResidencyCover = () => {
         <div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(0deg, rgba(96, 62, 0, 0.2), rgba(96, 62, 0, 0.2)), url('/images/cover-main.png')`,
+            backgroundImage: `linear-gradient(0deg, rgba(96, 62, 0, 0.2), rgba(96, 62, 0, 0.2)), url('/images/residency/cover-main.png')`,
             transform: 'rotate(180deg)'
           }}
         />
       </div>
 
-      {/* 四角大字 - 烟火邛州 */}
-      {/* 烟 */}
       <span
         className="absolute text-[rgba(255,244,212,0.64)]"
         style={{
@@ -189,7 +173,6 @@ const ResidencyCover = () => {
         烟
       </span>
 
-      {/* 火 */}
       <span
         className="absolute text-[rgba(255,244,212,0.64)]"
         style={{
@@ -205,7 +188,6 @@ const ResidencyCover = () => {
         火
       </span>
 
-      {/* 邛 */}
       <span
         className="absolute text-[rgba(255,244,212,0.64)]"
         style={{
@@ -221,7 +203,6 @@ const ResidencyCover = () => {
         邛
       </span>
 
-      {/* 州 */}
       <span
         className="absolute text-[rgba(255,244,212,0.64)]"
         style={{
@@ -237,8 +218,6 @@ const ResidencyCover = () => {
         州
       </span>
 
-      {/* 左下英文 */}
-      {/* Spring 2026 */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -253,7 +232,6 @@ const ResidencyCover = () => {
         Spring 2026
       </span>
 
-      {/* Embers OF QIONG - OF 用小字体 */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -269,7 +247,6 @@ const ResidencyCover = () => {
         <span style={{ fontSize: 'clamp(18px, 5.6vw, 44px)' }}>QIONG</span>
       </span>
 
-      {/* Open Call */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -284,7 +261,6 @@ const ResidencyCover = () => {
         Open Call
       </span>
 
-      {/* Art Residency - 右移避免与 QIONG 重叠 */}
       <span
         className="absolute text-[#E2D19E]"
         style={{
@@ -299,8 +275,6 @@ const ResidencyCover = () => {
         Art Residency
       </span>
 
-      {/* 底部主办信息 */}
-      {/* 主办_野所 ROTOHAUS */}
       <span
         className="absolute text-white"
         style={{
@@ -315,7 +289,6 @@ const ResidencyCover = () => {
         主办_野所 ROTOHAUS
       </span>
 
-      {/* 支持_邛崃市文化体育和旅游局 */}
       <span
         className="absolute text-white"
         style={{
@@ -330,7 +303,6 @@ const ResidencyCover = () => {
         支持_邛崃市文化体育和旅游局
       </span>
 
-      {/* 邛崃市夹关镇人民政府；邛崃市临济镇人民政府 */}
       <span
         className="absolute text-white"
         style={{
@@ -345,7 +317,6 @@ const ResidencyCover = () => {
         邛崃市夹关镇人民政府；邛崃市临济镇人民政府
       </span>
 
-      {/* 邛窑国家考古遗址公园 */}
       <span
         className="absolute text-white"
         style={{

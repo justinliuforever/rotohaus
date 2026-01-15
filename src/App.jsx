@@ -1,16 +1,14 @@
-import HeroSection from './components/HeroSection'
-import IntroSection from './components/IntroSection'
-import InfoSection from './components/InfoSection'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import ResidencyPage from './pages/ResidencyPage'
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <IntroSection />
-      <InfoSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/residency" element={<ResidencyPage />} />
+        <Route path="/" element={<Navigate to="/residency" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

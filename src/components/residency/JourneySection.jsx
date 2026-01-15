@@ -30,13 +30,11 @@ const TimelineItem = ({ time, title, description, isLast = false, delay = 0 }) =
       transition={{ duration: 0.6, delay }}
       className="flex gap-6"
     >
-      {/* 时间轴 */}
       <div className="flex flex-col items-center">
         <div className="w-3 h-3 rounded-full bg-[#476724] ring-4 ring-[#476724]/20" />
         {!isLast && <div className="w-px flex-1 bg-gradient-to-b from-[#476724]/40 to-transparent mt-2" />}
       </div>
 
-      {/* 内容 */}
       <div className="pb-12">
         <p
           className="text-[#476724] text-sm mb-2"
@@ -106,7 +104,6 @@ const JourneySection = () => {
     <section className="py-24 lg:py-32 bg-[#476724]">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
 
-        {/* 标题 */}
         <FadeIn className="text-center mb-16 lg:mb-24">
           <p
             className="text-[#E2D19E]/60 text-sm tracking-[0.3em] uppercase mb-6"
@@ -126,7 +123,6 @@ const JourneySection = () => {
           </h2>
         </FadeIn>
 
-        {/* 时间线 */}
         <div className="grid lg:grid-cols-2 gap-x-16">
           <div className="lg:pr-8">
             {timeline.slice(0, 3).map((item, index) => (
@@ -150,7 +146,6 @@ const JourneySection = () => {
           </div>
         </div>
 
-        {/* 底部信息 */}
         <FadeIn delay={0.6} className="mt-16 lg:mt-24 text-center">
           <div className="inline-flex flex-wrap justify-center gap-8 lg:gap-12 p-8 rounded-2xl bg-[#E2D19E]/10">
             <div className="text-center">

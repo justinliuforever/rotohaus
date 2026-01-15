@@ -148,7 +148,6 @@ const InfoSection = () => {
     >
       <div className="paper-texture absolute inset-0" />
 
-      {/* Decorative elements */}
       <motion.div
         style={{ y: decorY }}
         className="absolute -left-20 top-1/4 w-40 h-40 opacity-[0.04] pointer-events-none"
@@ -176,7 +175,7 @@ const InfoSection = () => {
             <motion.img
               whileHover={{ rotate: 5, scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              src="/images/intro/logo.png"
+              src="/images/residency/intro/logo.png"
               alt="Rotohaus"
               className="w-16 h-16 lg:w-20 lg:h-20"
             />
@@ -213,7 +212,6 @@ const InfoSection = () => {
           </div>
         </FadeInSection>
 
-        {/* Info cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {infoCards.map((card, index) => (
             <InfoCard
