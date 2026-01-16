@@ -8,7 +8,13 @@ import {
   ScheduleSection,
   ApplicationSection,
   SupportSection,
-  ApplySection
+  ApplySection,
+  QASection,
+  RotohausSection,
+  HistorySection,
+  AdvisorsSection,
+  TeamSection,
+  ThanksSection
 } from '../components/residency';
 import Footer from '../components/shared/Footer';
 
@@ -25,6 +31,12 @@ const ResidencyPage = () => {
       <ApplicationSection />
       <SupportSection />
       <ApplySection />
+      <QASection />
+      <RotohausSection />
+      <HistorySection />
+      <TeamSection />
+      <AdvisorsSection />
+      <ThanksSection />
       <Footer />
     </div>
   );
