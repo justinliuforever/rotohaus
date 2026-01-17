@@ -256,7 +256,8 @@ const InfoSection = () => {
         </div>
 
         <FadeInSection delay={0.5} className="text-center mt-16 lg:mt-24">
-          <motion.button
+          <motion.a
+            href="#apply"
             whileHover={{ scale: 1.03, y: -3 }}
             whileTap={{ scale: 0.98 }}
             className="group inline-flex items-center gap-3 px-10 py-5 bg-[#476724] text-white rounded-full shadow-lg shadow-[#476724]/25 transition-all duration-300 hover:shadow-xl hover:shadow-[#476724]/30"
@@ -277,7 +278,7 @@ const InfoSection = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </motion.svg>
-          </motion.button>
+          </motion.a>
           <p className="mt-5 text-[#392C20]/45 text-sm tracking-wide">
             Application Deadline: February 14, 2026
           </p>

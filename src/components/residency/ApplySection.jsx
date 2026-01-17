@@ -76,7 +76,7 @@ const ApplySection = () => {
   ];
 
   return (
-    <section className="relative py-24 lg:py-40 bg-gradient-to-b from-[#476724]/[0.03] via-white to-white overflow-hidden">
+    <section id="apply" className="relative py-24 lg:py-40 bg-gradient-to-b from-[#476724]/[0.03] via-white to-white overflow-hidden">
       <div className="paper-texture absolute inset-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12">

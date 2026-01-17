@@ -239,10 +239,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.button
+            <motion.a
+              href="#apply"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative px-8 py-4 bg-[#E2D19E] text-[#392C20] rounded-full overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-[#E2D19E]/20"
+              className="group relative inline-block px-8 py-4 bg-[#E2D19E] text-[#392C20] rounded-full overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-[#E2D19E]/20"
               style={{
                 fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(13px, 1.3vw, 16px)',
@@ -260,7 +261,7 @@ const HeroSection = () => {
                   →
                 </motion.span>
               </span>
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           <motion.div
