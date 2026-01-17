@@ -18,7 +18,7 @@ const FadeInSection = ({ children, delay = 0, className = '' }) => {
   );
 };
 
-const TeamMemberCard = ({ name, nameEn, role, roleEn, description, image, delay = 0, align = 'left' }) => {
+const TeamMemberCard = ({ name, nameZh, role, roleEn, description, image, delay = 0, align = 'left' }) => {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: '-80px' });
   const isRight = align === 'right';
@@ -52,9 +52,9 @@ const TeamMemberCard = ({ name, nameEn, role, roleEn, description, image, delay 
               <span
                 className="text-[#392C20]"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(28px, 3vw, 36px)',
-                  fontWeight: 500
+                  fontWeight: 400
                 }}
               >
                 {name}
@@ -67,7 +67,7 @@ const TeamMemberCard = ({ name, nameEn, role, roleEn, description, image, delay 
                   fontWeight: 200
                 }}
               >
-                {nameEn}
+                {nameZh}
               </span>
             </div>
             <p
@@ -93,10 +93,10 @@ const TeamMemberCard = ({ name, nameEn, role, roleEn, description, image, delay 
           <p
             className="text-[#555]"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(14px, 1.3vw, 18px)',
               lineHeight: 2,
-              fontWeight: 500,
+              fontWeight: 300,
               textAlign: 'justify'
             }}
           >
@@ -108,7 +108,7 @@ const TeamMemberCard = ({ name, nameEn, role, roleEn, description, image, delay 
   );
 };
 
-const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, delay = 0, align = 'left' }) => {
+const CreativeTeamCard = ({ role, roleEn, name, nameZh, description, image, delay = 0, align = 'left' }) => {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: '-80px' });
   const isRight = align === 'right';
@@ -132,24 +132,14 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
           <h3
             className="text-[#392C20]"
             style={{
-              fontFamily: "'FZFengRuSong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(48px, 5vw, 72px)',
-              fontWeight: 400,
+              fontWeight: 200,
               lineHeight: 1.1
             }}
           >
-            {role}
-          </h3>
-          <span
-            className="text-[#392C20]/60"
-            style={{
-              fontFamily: "'Helvetica Neue', sans-serif",
-              fontSize: 'clamp(24px, 2.5vw, 36px)',
-              fontWeight: 200
-            }}
-          >
             {roleEn}
-          </span>
+          </h3>
         </div>
       </motion.div>
 
@@ -174,9 +164,9 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
             <span
               className="text-[#392C20]"
               style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
+                fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(28px, 3vw, 36px)',
-                fontWeight: 500
+                fontWeight: 400
               }}
             >
               {name}
@@ -189,7 +179,7 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
                 fontWeight: 200
               }}
             >
-              {nameEn}
+              {nameZh}
             </span>
           </div>
         </motion.div>
@@ -204,10 +194,10 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
           <p
             className="text-[#555]"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(14px, 1.3vw, 18px)',
               lineHeight: 2,
-              fontWeight: 500,
+              fontWeight: 300,
               textAlign: 'justify'
             }}
           >
@@ -222,29 +212,29 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
 const TeamSection = () => {
   const productionTeam = [
     {
-      name: '王韵依',
-      nameEn: 'Rainee',
+      name: 'Rainee',
+      nameZh: '王韵依',
       role: 'Director',
       roleEn: 'Director of Art Residency',
-      description: '野所（ROTOHAUS）创始人、艺术总监，本次「烟火邛州｜Embers of Qiong」国际艺术驻地发起人及首席策划。王韵依拥有哈佛大学艺术教育硕士学位、纽约大学交互媒体艺术学士学位，曾任麻省理工学院 MIT Media Lab 研究助理，长期关注文化遗产、民族社群与数字科技的跨领域实践。作为艺术家与策展人，其作品与讲座曾在阿布扎比卢浮宫、MIT Media Lab、哈佛大学绿色发展办公室、奥地利林茨艺术节、荷兰媒体建筑双年展、时尚杂志ELLE、La MaMa Galleria（纽约）、联合国世界国际非遗节等机构与平台呈现。她曾参与发起「数字羌境」与「南海黎风」等艺术驻地项目，积累了在地研究、跨文化协作与公共呈现的经验。',
+      description: 'Founder and Art Director of ROTOHAUS, initiator and chief curator of "Embers of Qiong" International Art Residency. Rainee holds a Master\'s degree in Arts Education from Harvard University and a Bachelor\'s degree in Interactive Media Arts from New York University. She was a research assistant at MIT Media Lab, focusing on cross-disciplinary practices involving cultural heritage, ethnic communities, and digital technology. As an artist and curator, her works and lectures have been presented at Louvre Abu Dhabi, MIT Media Lab, Harvard Green Office, Ars Electronica, Media Architecture Biennale, ELLE Magazine, La MaMa Galleria (NYC), and the UN International Intangible Cultural Heritage Expo.',
       image: '/images/residency/team/rainee.svg',
       align: 'left'
     },
     {
-      name: '朱芃妍',
-      nameEn: 'Max',
+      name: 'Max',
+      nameZh: '朱芃妍',
       role: 'Co-director',
       roleEn: 'Co-director',
-      description: '野所（ROTOHAUS）创始人之一，多媒体艺术家、策展人及叙事者，毕业于波士顿学院影像艺术与传播学方向。曾参与《时尚芭莎》等时尚杂志、戛纳电影节及联合国芭蕾舞峰会等项目的创意与影像叙事工作。发起并主导波士顿学生艺术家平台 SPoT，通过策划展览、论坛与公共项目，构建青年艺术家与艺术生态之间的实践与对话网络。她的实践以影像装置、文本与社会参与式项目为核心，借鉴具身性取向与感官民族志方法，探索个体叙事与感官经验如何在不同媒介中被转译，并在跨越空间与时间的过程中生成可被他者感知与理解的共享体验。其作品曾于波士顿市政厅等艺术空间展出。',
+      description: 'Co-founder of ROTOHAUS, multimedia artist, curator, and storyteller. Max graduated from Boston College with a focus on Film Studies and Communication. She has participated in creative and visual narrative projects for Harper\'s Bazaar, Cannes Film Festival, and the UN Ballet Summit. She founded SPoT, a Boston-based student artist platform, organizing exhibitions, forums, and public programs to build dialogue networks between emerging artists and the art ecosystem.',
       image: '/images/residency/team/max.svg',
       align: 'right'
     },
     {
-      name: '刘沁源',
-      nameEn: 'Justin',
+      name: 'Justin',
+      nameZh: '刘沁源',
       role: 'Head of Finance',
       roleEn: 'Head of Finance and Tech',
-      description: '野所（ROTOHAUS）创始人之一，约翰霍普金斯大学计算机科学硕士，软件工程师，现任佛罗里达对冲基金工程师。曾于加州 FinTech 初创公司 Ark7 从事软件开发工作。大学期间主导开发技术平台 KaraOrchee，项目在多项美国州级创业竞赛中获得前三名，并得到 HopStart、PAVA、TEDCO 等机构支持。作为 ROTOHAUS 联合创始人，他致力于以科技为媒介，重塑文化与创作的当代体验，使传统与创新在现实中持续生长。',
+      description: 'Co-founder of ROTOHAUS, software engineer with a Master\'s degree in Computer Science from Johns Hopkins University. Currently working as an engineer at a Florida-based hedge fund. Previously worked in software development at Ark7, a California FinTech startup. During university, he led the development of KaraOrchee, winning top placements in multiple US state-level entrepreneurship competitions with support from HopStart, PAVA, and TEDCO.',
       image: '/images/residency/team/justin.svg',
       align: 'left'
     }
@@ -254,27 +244,27 @@ const TeamSection = () => {
     {
       role: '策展人',
       roleEn: 'Chief Curator',
-      name: '王媛媛',
-      nameEn: 'Yuanyuan',
-      description: '青年艺术家、策展人和研究者，擅长跨媒介与跨感官互动的艺术表达，探索数字媒介环境中人类感知、技术与文化的复杂交互。她拥有纽约大学Tisch艺术学院互动电子媒体实验室（NYU ITP）硕士学位，并曾在探索频道、旅游卫视《行者》栏目及新疆电视台担任纪录片编导及研究员。近年来，她专注于"数字语境中的感知重构与经验转译"和"技术赋权下的互动机制"方向的研究，运用影像、声音、互动装置及人工智能等多元媒介，探讨数字技术如何介入、重塑并影响当代人的感知经验。她的交互式艺术作品曾在美国和中国展出，并积极参与跨学科对话及多项高校学术课题，致力于打破数字环境中个体与技术之间的边界，激发观众对自身感知的再思考。',
+      name: 'Yuanyuan',
+      nameZh: '王媛媛',
+      description: 'Young artist, curator, and researcher specializing in cross-media and multi-sensory interactive art, exploring the complex interactions between human perception, technology, and culture in digital environments. She holds a Master\'s degree from NYU Tisch ITP, and has worked as a documentary director and researcher at Discovery Channel, Travel Channel\'s "Explorer" program, and Xinjiang Television. Her interactive artworks have been exhibited in the US and China.',
       image: '/images/residency/team/yuanyuan.svg',
       align: 'left'
     },
     {
       role: '媒体专员',
       roleEn: 'Media Specialist',
-      name: '付浩然',
-      nameEn: 'Charles',
-      description: '纪录片导演、策展人。中国传媒大学艺术学学士、四川大学软件工程硕士，现工作生活于四川成都。研究领域为纪录片、艺术设计，博物馆展陈、影像艺术。作品聚焦人文纪实、社会热点、乡村振兴等领域，旨在用镜头记录人物，用情感传递故事，用艺术呈现真实生活。代表作《四川水脉》、《三云与久香的羌年》、《高速路上又一年》、《村官日记》、《"蓝天"守望者》、《时光拼图师》等，作品获多项国家级、省级奖项。三级导演、中国电视艺术家协会会员、中国博物馆协会会员、中国摄影著作权协会会员。',
+      name: 'Charles',
+      nameZh: '付浩然',
+      description: 'Documentary Director and Curator. Holds a Bachelor of Arts from the Communication University of China and a Master of Software Engineering from Sichuan University. Currently based in Chengdu, Sichuan. Research interests include documentary filmmaking, artistic design, museum exhibition design, and visual arts. Third-Grade Director, member of the China Television Artists Association, the Chinese Museums Association, and the China Photography Copyright Society.',
       image: '/images/residency/team/charles.svg',
       align: 'right'
     },
     {
       role: '在地统筹',
       roleEn: 'Local Coordinator',
-      name: '吴沛阳',
-      nameEn: 'Kris',
-      description: '本科毕业于莫纳什大学商业数据分析专业，研究生就读于迪肯大学商业运动管理专业，兼具扎实的数据分析能力与前沿的体育商业运营思维。现任职于合义坊酒业有限公司，深度参与国内外多场大型体育赛事的策划与执行工作。聚焦商业、艺术与体育的跨界融合赛道，以酒业品牌为实践载体，探索传统文化与现代潮流的破圈路径。致力于通过数据分析赋能创意策划，用体育的活力链接艺术的质感，驱动商业价值与文化价值的双重提升，催生全新的产业创意增长点。',
+      name: 'Kris',
+      nameZh: '吴沛阳',
+      description: 'She holds a bachelor\'s degree in Business Data Analytics from Monash University and a master\'s degree in Business Sports Management from Deakin University. Currently working at Heyifang Wine Co., Ltd., she has participated in the planning of many domestic and international sports events, gaining abundant practical planning experience and industry resources. Now, she focuses on the cross-border integration of business, art and sports.',
       image: '/images/residency/team/kris.svg',
       align: 'left'
     }
@@ -297,13 +287,13 @@ const TeamSection = () => {
               <h2
                 className="text-[#392C20]"
                 style={{
-                  fontFamily: "'FZFengRuSong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(40px, 5vw, 80px)',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   lineHeight: 1.15
                 }}
               >
-                出品团队
+                Production Team
               </h2>
               <p
                 className="text-[#392C20]/60 mt-2"
@@ -313,7 +303,7 @@ const TeamSection = () => {
                   fontWeight: 200
                 }}
               >
-                Rotohaus Production Team
+                Rotohaus Core Team
               </p>
             </div>
           </div>
@@ -349,13 +339,13 @@ const TeamSection = () => {
               <h2
                 className="text-[#392C20]"
                 style={{
-                  fontFamily: "'FZFengRuSong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(40px, 5vw, 80px)',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   lineHeight: 1.15
                 }}
               >
-                主创团队
+                Creative Team
               </h2>
               <p
                 className="text-[#392C20]/60 mt-2"

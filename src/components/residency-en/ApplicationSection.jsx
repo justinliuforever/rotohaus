@@ -24,9 +24,9 @@ const TimelineItem = ({ label, value, delay = 0 }) => {
       <span
         className="text-[#959726]"
         style={{
-          fontFamily: "'Huiwen-Fangsong', serif",
+          fontFamily: "'Helvetica Neue', sans-serif",
           fontSize: 'clamp(14px, 1.2vw, 18px)',
-          fontWeight: 500
+          fontWeight: 400
         }}
       >
         {label}
@@ -34,9 +34,9 @@ const TimelineItem = ({ label, value, delay = 0 }) => {
       <span
         className="text-[#392C20]"
         style={{
-          fontFamily: "'Huiwen-Fangsong', serif",
+          fontFamily: "'Helvetica Neue', sans-serif",
           fontSize: 'clamp(18px, 1.8vw, 26px)',
-          fontWeight: 500
+          fontWeight: 400
         }}
       >
         {value}
@@ -58,8 +58,9 @@ const MediaTag = ({ children, primary = true, delay = 0 }) => {
           : 'bg-transparent text-[#808080] border border-[#E0E0E0]'
       }`}
       style={{
-        fontFamily: "'Huiwen-Fangsong', serif",
-        fontSize: 'clamp(14px, 1.4vw, 18px)'
+        fontFamily: "'Helvetica Neue', sans-serif",
+        fontSize: 'clamp(14px, 1.4vw, 18px)',
+        fontWeight: 300
       }}
     >
       {children}
@@ -69,28 +70,28 @@ const MediaTag = ({ children, primary = true, delay = 0 }) => {
 
 const ApplicationSection = () => {
   const primaryMedia = [
-    '灯光艺术/投影',
-    '装置艺术/多媒体艺术',
-    '艺术/戏剧/音乐疗愈',
-    '纪录片/影像/摄影艺术',
-    'AIGC/3D/动画',
-    '社区/公共艺术实践',
-    '陶瓷艺术'
+    'Light Art / Projection',
+    'Installation Art / New Media Art',
+    'Moving Image / Documentary',
+    'Art / Theater / Music Therapy',
+    'AIGC / 3D / Animation',
+    'Community / Public Art Practice',
+    'Ceramic Art'
   ];
 
   const secondaryMedia = [
-    '建筑与空间设计',
-    '平面与文创设计',
-    '民俗与人类学研究',
-    '服装设计',
-    '纤维与材料艺术',
-    '植物染/手工艺'
+    'Architecture & Spatial Design',
+    'Graphic & Cultural Product Design',
+    'Folklore & Anthropology Research',
+    'Fashion Design',
+    'Fiber & Material Art',
+    'Natural Dyeing / Handicraft'
   ];
 
   const values = [
-    '对在地艺术、艺术乡建、非遗文化有真诚兴趣',
-    '能够在较短时间内沉浸式学习并产出作品原型',
-    '对社区与公共空间有敏感度，愿意与当地社区互动'
+    'Genuine interest in site-specific art, rural art initiatives, and intangible cultural heritage',
+    'Ability to engage in immersive learning and produce work prototypes within a short timeframe',
+    'Sensitivity to community and public space, with willingness to interact with local communities'
   ];
 
   return (
@@ -115,46 +116,36 @@ const ApplicationSection = () => {
               <h2
                 className="text-[#392C20] mb-2"
                 style={{
-                  fontFamily: "'FZFengRuSong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(48px, 6vw, 96px)',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   lineHeight: 1.15
                 }}
               >
-                申请时间
-              </h2>
-              <p
-                className="text-[#392C20]/60"
-                style={{
-                  fontFamily: "'Helvetica Neue', sans-serif",
-                  fontSize: 'clamp(24px, 3vw, 44px)',
-                  fontWeight: 200
-                }}
-              >
                 Application Timeline
-              </p>
+              </h2>
             </div>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <TimelineItem
-              label="驻地时间"
-              value="2026年3月13日 - 4月15日"
+              label="Residency Period"
+              value="March 13 – April 15, 2026"
               delay={0.1}
             />
             <TimelineItem
-              label="申请时间"
-              value="即日起至2026年2月14日"
+              label="Application Period"
+              value="Now – February 14, 2026"
               delay={0.15}
             />
             <TimelineItem
-              label="首批入选者公布"
-              value="2月1日"
+              label="First Round Results"
+              value="February 1st"
               delay={0.2}
             />
             <TimelineItem
-              label="最终招募结果公布"
-              value="2月20日"
+              label="Final Results"
+              value="February 20th"
               delay={0.25}
             />
           </div>
@@ -165,34 +156,25 @@ const ApplicationSection = () => {
             <h2
               className="text-[#392C20]"
               style={{
-                fontFamily: "'FZFengRuSong', serif",
+                fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(48px, 6vw, 96px)',
-                fontWeight: 400,
+                fontWeight: 200,
                 lineHeight: 1.15
               }}
             >
-              招募对象
+              Who Are We Looking For?
             </h2>
-            <p
-              className="text-[#392C20]/60"
-              style={{
-                fontFamily: "'Helvetica Neue', sans-serif",
-                fontSize: 'clamp(24px, 3vw, 44px)',
-                fontWeight: 200
-              }}
-            >
-              Who Are We Looking for?
-            </p>
           </div>
           <p
             className="text-[#626262]/80 max-w-4xl"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(18px, 2vw, 28px)',
-              lineHeight: 1.6
+              lineHeight: 1.6,
+              fontWeight: 300
             }}
           >
-            *我们欢迎多元的实验性实践，鼓励跨媒介的合作创作与对话，诚邀各类背景的艺术家报名参与。
+            *We welcome diverse experimental practices and encourage cross-media collaborative creation and dialogue. Artists from all backgrounds are invited to apply.
           </p>
         </FadeInSection>
 
@@ -201,13 +183,13 @@ const ApplicationSection = () => {
             <h3
               className="text-[#959726] mb-6"
               style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
+                fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(36px, 4vw, 64px)',
-                fontWeight: 500,
+                fontWeight: 300,
                 lineHeight: 1.2
               }}
             >
-              侧重媒介
+              Primary Media Focus
             </h3>
             <div className="flex flex-wrap gap-3">
               {primaryMedia.map((media, i) => (
@@ -222,13 +204,13 @@ const ApplicationSection = () => {
             <h3
               className="text-[#959726] mb-6 lg:text-right"
               style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
+                fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(36px, 4vw, 64px)',
-                fontWeight: 500,
+                fontWeight: 300,
                 lineHeight: 1.2
               }}
             >
-              其它相关*
+              Other Related Fields*
             </h3>
             <div className="flex flex-wrap gap-3 lg:justify-end">
               {secondaryMedia.map((media, i) => (
@@ -245,23 +227,23 @@ const ApplicationSection = () => {
             <h3
               className="text-[#959726]"
               style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
+                fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(36px, 4vw, 64px)',
-                fontWeight: 500,
+                fontWeight: 300,
                 lineHeight: 1
               }}
             >
-              招募人数
+              Number of Positions
             </h3>
             <span
               className="text-[#392C20] pb-1"
               style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
+                fontFamily: "'Helvetica Neue', sans-serif",
                 fontSize: 'clamp(28px, 3vw, 48px)',
-                fontWeight: 500
+                fontWeight: 400
               }}
             >
-              5 - 10人（组）
+              5 – 10 Artists (or Groups)
             </span>
           </div>
         </FadeInSection>
@@ -270,13 +252,13 @@ const ApplicationSection = () => {
           <h3
             className="text-[#959726] mb-8"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(36px, 4vw, 64px)',
-              fontWeight: 500,
+              fontWeight: 300,
               lineHeight: 1.2
             }}
           >
-            我们尤为看重
+            We Especially Value Artists Who...
           </h3>
           <div className="space-y-4">
             {values.map((value, i) => (
@@ -284,9 +266,10 @@ const ApplicationSection = () => {
                 <p
                   className="text-[#392C20] flex items-start gap-4"
                   style={{
-                    fontFamily: "'Huiwen-Fangsong', serif",
+                    fontFamily: "'Helvetica Neue', sans-serif",
                     fontSize: 'clamp(18px, 2vw, 28px)',
-                    lineHeight: 1.6
+                    lineHeight: 1.6,
+                    fontWeight: 300
                   }}
                 >
                   <span className="text-[#959726] mt-1">•</span>
@@ -305,7 +288,7 @@ const ApplicationSection = () => {
           >
             <img
               src="/images/residency/application/ai-visual.png"
-              alt="艺术驻地视觉"
+              alt="Art Residency Visual"
               className="w-full h-64 lg:h-[480px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />

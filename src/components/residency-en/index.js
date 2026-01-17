@@ -1,0 +1,16 @@
+export { default as HeroSection } from './HeroSection';
+export { default as IntroSection } from './IntroSection';
+export { default as InfoSection } from './InfoSection';
+export { default as JiaguanSection } from './JiaguanSection';
+export { default as QiongyaoSection } from './QiongyaoSection';
+export { default as LandianfangSection } from './LandianfangSection';
+export { default as ScheduleSection } from './ScheduleSection';
+export { default as ApplicationSection } from './ApplicationSection';
+export { default as SupportSection } from './SupportSection';
+export { default as ApplySection } from './ApplySection';
+export { default as QASection } from './QASection';
+export { default as RotohausSection } from './RotohausSection';
+export { default as HistorySection } from './HistorySection';
+export { default as AdvisorsSection } from './AdvisorsSection';
+export { default as TeamSection } from './TeamSection';
+export { default as ThanksSection } from './ThanksSection';

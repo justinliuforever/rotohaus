@@ -49,13 +49,13 @@ const ScheduleSection = () => {
               <h2
                 className="text-[#392C20]"
                 style={{
-                  fontFamily: "'FZFengRuSong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(36px, 5vw, 72px)',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   lineHeight: 1.1
                 }}
               >
-                驻地流程
+                Residency Flow
               </h2>
             </div>
           </div>
@@ -68,17 +68,18 @@ const ScheduleSection = () => {
               letterSpacing: '0.1em'
             }}
           >
-            Residency Flow & Creation Phase
+            Creation Phase & Timeline
           </p>
           <p
             className="text-[#6E6E6E] max-w-xl"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(16px, 1.5vw, 20px)',
-              lineHeight: 1.7
+              lineHeight: 1.7,
+              fontWeight: 300
             }}
           >
-            本次艺术驻地为期约<Highlight type="time">三至五周</Highlight>，整体流程分为三个阶段
+            The residency spans approximately <Highlight type="time">three to five weeks</Highlight>, divided into three phases.
           </p>
         </FadeInSection>
 
@@ -109,12 +110,12 @@ const ScheduleSection = () => {
               <h3
                 className="text-[#392C20] mt-1"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(24px, 2.5vw, 36px)',
-                  fontWeight: 500
+                  fontWeight: 400
                 }}
               >
-                开幕式 + 联合调研
+                Opening + Joint Research
               </h3>
             </div>
           </div>
@@ -122,25 +123,26 @@ const ScheduleSection = () => {
           <div
             className="text-[#4A4A4A] max-w-3xl mb-10"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(15px, 1.4vw, 19px)',
-              lineHeight: 2
+              lineHeight: 2,
+              fontWeight: 300
             }}
           >
             <p className="mb-5">
-              驻地首周，艺术家们将集中进行在地调研，进入<Highlight type="location">夹关古镇</Highlight>、<Highlight type="location">邛窑国家考古遗址公园</Highlight>、<Highlight type="location">临济蓝靛坊</Highlight>等核心创作场域，了解其历史背景、材料系统与创作条件。
+              During the first week, artists will conduct on-site research, entering core creative spaces including <Highlight type="location">Jiaguan Ancient Town</Highlight>, <Highlight type="location">Qiong Kiln Archaeological Park</Highlight>, and <Highlight type="location">The Indigo Courtyard</Highlight> to understand their historical backgrounds, material systems, and creative conditions.
             </p>
             <p>
-              同期进行邛崃境内人文景观采风，并与本地非遗传承人深入对话——
+              Artists will also explore the cultural landscape of Qionglai and engage in in-depth dialogue with local intangible cultural heritage practitioners—
             </p>
           </div>
 
           <div className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 sm:grid sm:grid-cols-2 md:grid-cols-4 sm:overflow-visible lg:gap-6">
             {[
-              { src: '/images/residency/schedule/craft-bamboo.png', label: '瓷胎竹编' },
-              { src: '/images/residency/schedule/craft-wine.png', label: '酿酒技艺' },
-              { src: '/images/residency/schedule/craft-bamboo-song.png', label: '竹麻号子' },
-              { src: '/images/residency/schedule/craft-qiang.png', label: '羌绣' }
+              { src: '/images/residency/schedule/craft-bamboo.png', label: 'Bamboo Weaving' },
+              { src: '/images/residency/schedule/craft-wine.png', label: 'Wine Brewing' },
+              { src: '/images/residency/schedule/craft-bamboo-song.png', label: 'Work Songs' },
+              { src: '/images/residency/schedule/craft-qiang.png', label: 'Qiang Embroidery' }
             ].map((craft, i) => (
               <motion.div
                 key={i}
@@ -153,8 +155,9 @@ const ScheduleSection = () => {
                 <p
                   className="text-[#808080] text-center"
                   style={{
-                    fontFamily: "'Huiwen-Fangsong', serif",
-                    fontSize: '14px'
+                    fontFamily: "'Helvetica Neue', sans-serif",
+                    fontSize: '14px',
+                    fontWeight: 300
                   }}
                 >
                   {craft.label}
@@ -191,12 +194,12 @@ const ScheduleSection = () => {
               <h3
                 className="text-[#392C20] mt-1"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(24px, 2.5vw, 36px)',
-                  fontWeight: 500
+                  fontWeight: 400
                 }}
               >
-                驻地创作
+                Residency Creation
               </h3>
             </div>
           </div>
@@ -204,19 +207,20 @@ const ScheduleSection = () => {
           <p
             className="text-[#4A4A4A] max-w-3xl mb-10"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(15px, 1.4vw, 19px)',
-              lineHeight: 2
+              lineHeight: 2,
+              fontWeight: 300
             }}
           >
-            艺术家将根据自身创作媒介与研究方向，选择一处或多处场域深入创作。每位艺术家将获得<Highlight type="craft">专属工作空间</Highlight>、<Highlight type="craft">材料支持</Highlight>与<Highlight type="craft">在地协作资源</Highlight>。
+            Artists will select one or more sites for in-depth creation based on their medium and research direction. Each artist will receive <Highlight type="craft">dedicated workspace</Highlight>, <Highlight type="craft">material support</Highlight>, and <Highlight type="craft">local collaboration resources</Highlight>.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {[
-              { src: '/images/residency/schedule/location-jiaguan.png', label: '夹关古镇', sub: '长期驻扎地 A' },
-              { src: '/images/residency/schedule/location-qiongyao.png', label: '邛窑遗址公园', sub: '长期驻扎地 B' },
-              { src: '/images/residency/schedule/accommodation.png', label: '住宿条件参考', sub: '' }
+              { src: '/images/residency/schedule/location-jiaguan.png', label: 'Jiaguan Ancient Town', sub: 'Primary Site A' },
+              { src: '/images/residency/schedule/location-qiongyao.png', label: 'Qiong Kiln Park', sub: 'Primary Site B' },
+              { src: '/images/residency/schedule/accommodation.png', label: 'Accommodation Reference', sub: '' }
             ].map((loc, i) => (
               <motion.div key={i} whileHover={{ y: -4 }}>
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-2">
@@ -225,8 +229,9 @@ const ScheduleSection = () => {
                 <p
                   className="text-[#808080]"
                   style={{
-                    fontFamily: "'Huiwen-Fangsong', serif",
-                    fontSize: 'clamp(12px, 1.2vw, 14px)'
+                    fontFamily: "'Helvetica Neue', sans-serif",
+                    fontSize: 'clamp(12px, 1.2vw, 14px)',
+                    fontWeight: 300
                   }}
                 >
                   {loc.sub && <span className="text-[#959726]">{loc.sub}</span>}
@@ -265,12 +270,12 @@ const ScheduleSection = () => {
               <h3
                 className="text-[#392C20] mt-1"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(24px, 2.5vw, 36px)',
-                  fontWeight: 500
+                  fontWeight: 400
                 }}
               >
-                夹关艺术节：整合与呈现
+                Jiaguan Art Festival: Integration & Presentation
               </h3>
             </div>
           </div>
@@ -278,16 +283,17 @@ const ScheduleSection = () => {
           <div
             className="max-w-3xl mb-10"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(15px, 1.4vw, 19px)',
-              lineHeight: 2
+              lineHeight: 2,
+              fontWeight: 300
             }}
           >
             <p className="text-[#4A4A4A] mb-4">
-              艺术节以<Highlight type="location">夹关镇主舞台</Highlight>为核心，联动巷口广场、老桥河道、古道谷仓等空间，分布式呈现。
+              The festival centers on the <Highlight type="location">Jiaguan main stage</Highlight>, connecting alley squares, old bridge riversides, and ancient granaries in a distributed presentation.
             </p>
             <p className="text-[#808080]">
-              夜间包含光影互动与水幕音乐表演；部分老建筑转化为临时展陈空间，鼓励艺术家与居民、游客共同完成参与式作品。
+              Evening programs include interactive light installations and water screen music performances. Some historic buildings will be transformed into temporary exhibition spaces, encouraging artists to create participatory works together with residents and visitors.
             </p>
           </div>
 
@@ -298,18 +304,19 @@ const ScheduleSection = () => {
           >
             <img
               src="/images/residency/schedule/iron-flower.png"
-              alt="打铁花表演"
+              alt="Iron Flower Performance"
               className="w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-[420px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <p
               className="absolute bottom-4 left-4 text-white/80"
               style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
-                fontSize: 'clamp(13px, 1.2vw, 16px)'
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(13px, 1.2vw, 16px)',
+                fontWeight: 300
               }}
             >
-              夹关古镇 · 五一打铁花表演
+              Jiaguan Ancient Town · May Day Iron Flower Performance
             </p>
           </motion.div>
         </FadeInSection>
@@ -318,11 +325,12 @@ const ScheduleSection = () => {
           <p
             className="text-[#BEBEBE]"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
-              fontSize: 'clamp(13px, 1.2vw, 16px)'
+              fontFamily: "'Helvetica Neue', sans-serif",
+              fontSize: 'clamp(13px, 1.2vw, 16px)',
+              fontWeight: 300
             }}
           >
-            * 以上流程可根据艺术家创作需求灵活调整
+            * The schedule above can be flexibly adjusted based on artists' creative needs.
           </p>
         </FadeInSection>
       </div>

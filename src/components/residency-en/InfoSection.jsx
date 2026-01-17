@@ -41,8 +41,8 @@ const InfoCard = ({ icon, title, content, delay = 0 }) => {
           <h3
             className="text-[#392C20] mb-3"
             style={{
-              fontFamily: "'FZFengRuSong', serif",
-              fontSize: 'clamp(20px, 2vw, 28px)',
+              fontFamily: "'Helvetica Neue', sans-serif",
+              fontSize: 'clamp(18px, 2vw, 26px)',
               fontWeight: 400
             }}
           >
@@ -51,9 +51,10 @@ const InfoCard = ({ icon, title, content, delay = 0 }) => {
           <div
             className="text-[#392C20]/70"
             style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
+              fontFamily: "'Helvetica Neue', sans-serif",
               fontSize: 'clamp(14px, 1.5vw, 18px)',
-              lineHeight: 1.6
+              lineHeight: 1.6,
+              fontWeight: 300
             }}
           >
             {content}
@@ -76,65 +77,65 @@ const InfoSection = () => {
   const infoCards = [
     {
       icon: '📍',
-      title: '驻地地点',
+      title: 'Residency Location',
       content: (
         <>
-          <p className="font-medium text-[#476724]">四川 · 邛崃</p>
-          <p className="mt-2 text-sm">夹关镇 / 邛窑国家考古遗址公园 / 蓝靛坊</p>
-          <p className="mt-1 text-sm opacity-70">多会场形式</p>
+          <p className="font-medium text-[#476724]">Qionglai, Sichuan, China</p>
+          <p className="mt-2 text-sm">Jiaguan Town / Qiong Kiln Park / The Indigo Courtyard</p>
+          <p className="mt-1 text-sm opacity-70">Multi-venue format</p>
         </>
       )
     },
     {
       icon: '📅',
-      title: '驻地时间',
+      title: 'Residency Period',
       content: (
         <>
-          <p className="font-medium text-[#476724]">2026.03.13 – 04.15</p>
-          <p className="mt-2 text-sm">共34天</p>
-          <p className="mt-1 text-sm opacity-70">可根据个人情况灵活调整</p>
+          <p className="font-medium text-[#476724]">March 13 – April 15, 2026</p>
+          <p className="mt-2 text-sm">34 days total</p>
+          <p className="mt-1 text-sm opacity-70">Flexible scheduling available</p>
         </>
       )
     },
     {
       icon: '⏰',
-      title: '重要日期',
+      title: 'Application Period',
       content: (
         <>
-          <p><span className="opacity-70">招募截止：</span><span className="font-medium">2026.02.14</span></p>
-          <p className="mt-2"><span className="opacity-70">入选公布：</span><span className="font-medium">2026.02.26</span></p>
+          <p><span className="opacity-70">Open Now – </span><span className="font-medium">February 14, 2026</span></p>
+          <p className="mt-2"><span className="opacity-70">Announcement: </span><span className="font-medium">February 26, 2026</span></p>
         </>
       )
     },
     {
       icon: '🎨',
-      title: '成果呈现',
+      title: 'Public Presentation',
       content: (
         <>
-          <p className="font-medium text-[#476724]">2026.05.01（五一）</p>
-          <p className="mt-2 text-sm">夹关镇公共空间展出</p>
+          <p className="font-medium text-[#476724]">May 1, 2026 (Labor Day)</p>
+          <p className="mt-2 text-sm">Exhibition in Jiaguan public spaces</p>
         </>
       )
     },
     {
       icon: '👥',
-      title: '招募对象',
+      title: 'Eligibility',
       content: (
         <>
-          <p className="font-medium">艺术家 / 跨媒介创作者</p>
-          <p className="mt-2 text-sm">个人或小组均可</p>
-          <p className="mt-2"><span className="opacity-70">名额：</span><span className="font-medium text-[#476724]">5–10 位（组）</span></p>
+          <p className="font-medium">Artists & cross-disciplinary practitioners</p>
+          <p className="mt-2 text-sm">Individual applicants or small groups are welcome</p>
+          <p className="mt-2"><span className="opacity-70">Slots: </span><span className="font-medium text-[#476724]">5–10 artists (groups)</span></p>
         </>
       )
     },
     {
       icon: '✨',
-      title: '项目支持',
+      title: 'Fees & Support',
       content: (
         <>
-          <p className="font-medium text-[#476724]">免费申请</p>
-          <p className="mt-2 text-sm">驻地期间食宿补贴</p>
-          <p className="mt-1 text-sm">创作材料支持</p>
+          <p className="font-medium text-[#476724]">No Application Fee</p>
+          <p className="mt-2 text-sm">Accommodation and meal subsidies provided</p>
+          <p className="mt-1 text-sm">Material support available</p>
         </>
       )
     }
@@ -183,24 +184,24 @@ const InfoSection = () => {
             <h2
               className="text-[#392C20]"
               style={{
-                fontFamily: "'FZFengRuSong', serif",
-                fontSize: 'clamp(32px, 5vw, 64px)',
-                fontWeight: 400
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(28px, 4vw, 56px)',
+                fontWeight: 200
               }}
             >
-              重要信息
+              Important Info
             </h2>
           </div>
           <p
             className="text-[#392C20]/50"
             style={{
-              fontFamily: "'Helvetica Neue', sans-serif",
+              fontFamily: "'FZFengRuSong', serif",
               fontSize: 'clamp(14px, 1.8vw, 20px)',
-              fontWeight: 300,
-              letterSpacing: '0.15em'
+              fontWeight: 400,
+              letterSpacing: '0.1em'
             }}
           >
-            Important Info
+            重要信息
           </p>
         </FadeInSection>
 
@@ -235,7 +236,7 @@ const InfoSection = () => {
               fontWeight: 500
             }}
           >
-            <span>立即申请</span>
+            <span>Apply Now</span>
             <motion.svg
               className="w-5 h-5"
               fill="none"
@@ -248,7 +249,7 @@ const InfoSection = () => {
             </motion.svg>
           </motion.button>
           <p className="mt-5 text-[#392C20]/45 text-sm tracking-wide">
-            申请截止：2026年2月14日
+            Application Deadline: February 14, 2026
           </p>
         </FadeInSection>
       </div>

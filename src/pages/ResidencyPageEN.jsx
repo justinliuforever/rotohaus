@@ -15,32 +15,32 @@ import {
   AdvisorsSection,
   TeamSection,
   ThanksSection
-} from '../components/residency';
+} from '../components/residency-en';
 import Footer from '../components/shared/Footer';
-import SideNavigation from '../components/shared/SideNavigation';
+import SideNavigation from '../components/residency-en/SideNavigation';
 import LanguageToggle from '../components/shared/LanguageToggle';
 
-const ResidencyPage = () => {
+const ResidencyPageEN = () => {
   return (
     <div className="min-h-screen">
       <LanguageToggle />
       <SideNavigation />
 
-      {/* 首页 - Hero, Intro, Info */}
+      {/* Home - Hero, Intro, Info */}
       <div id="hero">
         <HeroSection />
         <IntroSection />
         <InfoSection />
       </div>
 
-      {/* 场域 - 三个驻地地点 */}
+      {/* Venues - Three residency locations */}
       <div id="venues">
         <JiaguanSection />
         <QiongyaoSection />
         <LandianfangSection />
       </div>
 
-      {/* 流程 - 申请相关 */}
+      {/* Process - Application related */}
       <div id="process">
         <ScheduleSection />
         <ApplicationSection />
@@ -48,18 +48,18 @@ const ResidencyPage = () => {
         <ApplySection />
       </div>
 
-      {/* 问答 */}
+      {/* Q&A */}
       <div id="qa">
         <QASection />
       </div>
 
-      {/* 团队 - 学术顾问与核心团队 */}
+      {/* Team - Advisors and Core Team */}
       <div id="team">
         <AdvisorsSection />
         <TeamSection />
       </div>
 
-      {/* 关于 - Rotohaus 与致谢 */}
+      {/* About - Rotohaus and Thanks */}
       <div id="about">
         <RotohausSection />
         <HistorySection />
@@ -71,4 +71,4 @@ const ResidencyPage = () => {
   );
 };
 
-export default ResidencyPage;
+export default ResidencyPageEN;

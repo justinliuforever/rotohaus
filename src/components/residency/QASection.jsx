@@ -37,7 +37,7 @@ const QAItem = ({ question, answer, subItems, delay = 0 }) => {
 
       {/* Answer */}
       <p
-        className="text-[#959726] pl-0 lg:pl-8"
+        className="text-[#959726] pl-0 sm:pl-4 md:pl-6 lg:pl-8"
         style={{
           fontFamily: "'Huiwen-Fangsong', serif",
           fontSize: 'clamp(18px, 2vw, 28px)',
@@ -50,7 +50,7 @@ const QAItem = ({ question, answer, subItems, delay = 0 }) => {
 
       {/* Sub-items if any */}
       {subItems && subItems.length > 0 && (
-        <div className="mt-6 pl-0 lg:pl-8 space-y-4">
+        <div className="mt-4 sm:mt-6 pl-0 sm:pl-4 md:pl-6 lg:pl-8 space-y-3 sm:space-y-4">
           {subItems.map((item, i) => (
             <div key={i} className="flex items-start gap-3">
               <span

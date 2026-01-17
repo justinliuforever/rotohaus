@@ -44,22 +44,23 @@ const CreativeDirection = ({ title, description, delay = 0 }) => {
   return (
     <FadeInSection delay={delay} className="text-center">
       <h3
-        className="text-[#000000] mb-4"
+        className="text-[#C35900] mb-4"
         style={{
-          fontFamily: "'Huiwen-Fangsong', serif",
-          fontSize: 'clamp(24px, 3vw, 42px)',
-          fontWeight: 500,
+          fontFamily: "'Helvetica Neue', sans-serif",
+          fontSize: 'clamp(22px, 2.8vw, 40px)',
+          fontWeight: 200,
           lineHeight: 1.3
         }}
       >
         {title}
       </h3>
       <p
-        className="text-[#6E6E6E] max-w-2xl mx-auto"
+        className="text-[#392C20] max-w-3xl mx-auto"
         style={{
-          fontFamily: "'Huiwen-Fangsong', serif",
-          fontSize: 'clamp(16px, 1.8vw, 24px)',
-          lineHeight: 1.6
+          fontFamily: "'Helvetica Neue', sans-serif",
+          fontSize: 'clamp(15px, 1.6vw, 22px)',
+          lineHeight: 1.6,
+          fontWeight: 300
         }}
       >
         {description}
@@ -110,7 +111,7 @@ const JiaguanSection = () => {
                 >
                   <img
                     src="/images/residency/jiaguan/jiaguan-visual.png"
-                    alt="夹关"
+                    alt="Jiaguan"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
@@ -118,23 +119,23 @@ const JiaguanSection = () => {
                   <h2
                     className="text-[#392C20] mb-3"
                     style={{
-                      fontFamily: "'FZFengRuSong', serif",
-                      fontSize: 'clamp(48px, 6vw, 90px)',
-                      fontWeight: 400,
+                      fontFamily: "'Helvetica Neue', sans-serif",
+                      fontSize: 'clamp(36px, 5vw, 72px)',
+                      fontWeight: 200,
                       lineHeight: 1.1
                     }}
                   >
-                    夹关镇
+                    Jiaguan Ancient Town
                   </h2>
                   <p
                     className="text-[#392C20]/60"
                     style={{
-                      fontFamily: "'Helvetica Neue', sans-serif",
-                      fontSize: 'clamp(20px, 2.5vw, 36px)',
-                      fontWeight: 200
+                      fontFamily: "'FZFengRuSong', serif",
+                      fontSize: 'clamp(18px, 2vw, 32px)',
+                      fontWeight: 400
                     }}
                   >
-                    Jiaguan Ancient Town
+                    夹关镇
                   </p>
                 </div>
               </div>
@@ -147,58 +148,88 @@ const JiaguanSection = () => {
                 <span
                   className="px-4 py-2 bg-[#392C20]/5 rounded-full text-[#6E6E6E]"
                   style={{
-                    fontFamily: "'Huiwen-Fangsong', serif",
-                    fontSize: 'clamp(14px, 1.5vw, 18px)'
+                    fontFamily: "'Helvetica Neue', sans-serif",
+                    fontSize: 'clamp(13px, 1.4vw, 17px)',
+                    fontWeight: 300
                   }}
                 >
-                  *艺术家长驻空间
+                  *Main venues: artists' studio and accommodation
                 </span>
                 <span
                   className="px-4 py-2 bg-[#392C20]/5 rounded-full text-[#6E6E6E]"
                   style={{
-                    fontFamily: "'Huiwen-Fangsong', serif",
-                    fontSize: 'clamp(14px, 1.5vw, 18px)'
+                    fontFamily: "'Helvetica Neue', sans-serif",
+                    fontSize: 'clamp(13px, 1.4vw, 17px)',
+                    fontWeight: 300
                   }}
                 >
-                  主会场，公共呈现与社区互动的核心空间
+                  Key public sites for exhibition and community interaction
+                </span>
+                <span
+                  className="px-4 py-2 bg-[#392C20]/5 rounded-full text-[#6E6E6E]"
+                  style={{
+                    fontFamily: "'Helvetica Neue', sans-serif",
+                    fontSize: 'clamp(13px, 1.4vw, 17px)',
+                    fontWeight: 300
+                  }}
+                >
+                  Riverside night-time settings
                 </span>
               </div>
-            </FadeInSection>
-
-            <FadeInSection delay={0.15}>
-              <p
-                className="text-[#476724] mb-6"
-                style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
-                  fontSize: 'clamp(18px, 2vw, 28px)',
-                  lineHeight: 1.6,
-                  fontWeight: 500
-                }}
-              >
-                河畔烟火与边关市井的公共现场
-              </p>
-            </FadeInSection>
-
-            <FadeInSection delay={0.2}>
-              <p
-                className="text-[#392C20]"
-                style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
-                  fontSize: 'clamp(16px, 1.5vw, 22px)',
-                  lineHeight: 1.9,
-                  textAlign: 'justify'
-                }}
-              >
-                夹关是古代临邛至康藏的清溪道（又名灵关道）必经之路。早在秦惠文王公元前316年灭蜀后，因地势险要，关以西与汉地域接壤，外控夷獠，自古以来屯兵以戍守之，称夹门关，简称夹关，一直沿用至今，有南丝古道第一关的美誉。康熙《邛州志》载："城西南八十里夹门镇，关在山边，水出其间，饮食中流传的"夹关四绝"与马帮菜系，则为声音、影像、表演与叙事性创作提供了丰厚的素材来源。
-              </p>
             </FadeInSection>
           </div>
         </div>
 
+        <FadeInSection delay={0.15} className="mb-12 lg:mb-16">
+          <p
+            className="text-[#C35900] max-w-5xl"
+            style={{
+              fontFamily: "'Helvetica Neue', sans-serif",
+              fontSize: 'clamp(17px, 1.8vw, 26px)',
+              lineHeight: 1.7,
+              fontWeight: 300,
+              fontStyle: 'italic'
+            }}
+          >
+            Jiaguan has long served as a key passage connecting the Sichuan Basin with the Tibetan regions to the west. Historically positioned along major westward route, the town functioned as a strategic gateway where military, trade, and cultural exchange converged, giving it lasting significance as a threshold between regions.
+          </p>
+        </FadeInSection>
+
+        <FadeInSection delay={0.2} className="mb-12 lg:mb-16">
+          <p
+            className="text-[#392C20] max-w-5xl"
+            style={{
+              fontFamily: "'Helvetica Neue', sans-serif",
+              fontSize: 'clamp(16px, 1.5vw, 22px)',
+              lineHeight: 1.8,
+              textAlign: 'justify',
+              fontWeight: 300
+            }}
+          >
+            As the primary site of the residency, Jiaguan today operates less as a preserved historical monument than as a continuously active public realm. Well-preserved segments of ancient trade routes, riverside stilted houses, and old street structures coexist with ongoing markets, festivals, and everyday communal life, making the town a fertile context for public art and community-oriented artistic practice.
+          </p>
+        </FadeInSection>
+
+        <FadeInSection delay={0.25} className="mb-16 lg:mb-24">
+          <p
+            className="text-[#392C20]/80 max-w-5xl"
+            style={{
+              fontFamily: "'Helvetica Neue', sans-serif",
+              fontSize: 'clamp(16px, 1.5vw, 22px)',
+              lineHeight: 1.8,
+              textAlign: 'justify',
+              fontWeight: 300,
+              fontStyle: 'italic'
+            }}
+          >
+            Jiaguan is characterized by an active nocturnal public culture shaped by night-time tourism and collective gathering. Existing water-screen performances, fire-based spectacles, and illuminated public spaces offer strong contextual conditions for lighting installations, projection mapping, and spatial media practices, especially those engaging with outdoor environments and public spectatorship.
+          </p>
+        </FadeInSection>
+
         <div className="relative h-[320px] sm:h-[400px] md:h-[500px] lg:h-[650px] xl:h-[750px] mb-12 sm:mb-16 md:mb-20 lg:mb-32">
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-4.png"
-            alt="夹关镇街景"
+            alt="Jiaguan street view"
             className="w-24 h-20 sm:w-32 sm:h-26 md:w-44 md:h-36 lg:w-64 lg:h-48 xl:w-72 xl:h-56 left-[3%] top-[3%] sm:left-[4%] sm:top-[4%] lg:left-[5%] lg:top-[5%]"
             rotate={-6}
             delay={0}
@@ -207,7 +238,7 @@ const JiaguanSection = () => {
 
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-5.png"
-            alt="夹关镇建筑"
+            alt="Jiaguan architecture"
             className="w-32 h-26 sm:w-40 sm:h-32 md:w-56 md:h-44 lg:w-72 lg:h-56 xl:w-80 xl:h-64 right-[5%] top-[0%] sm:right-[8%] lg:right-[10%]"
             rotate={4}
             delay={0.1}
@@ -216,7 +247,7 @@ const JiaguanSection = () => {
 
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-6.png"
-            alt="夹关镇风光"
+            alt="Jiaguan scenery"
             className="w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-56 lg:h-56 xl:w-60 xl:h-60 left-[10%] top-[28%] sm:left-[12%] sm:top-[30%] lg:left-[15%]"
             rotate={-3}
             delay={0.15}
@@ -225,7 +256,7 @@ const JiaguanSection = () => {
 
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-3.png"
-            alt="夹关镇文化"
+            alt="Jiaguan culture"
             className="w-28 h-28 sm:w-36 sm:h-36 md:w-52 md:h-52 lg:w-64 lg:h-64 xl:w-72 xl:h-72 left-[30%] top-[18%] sm:left-[32%] sm:top-[20%] lg:left-[35%]"
             rotate={2}
             delay={0.2}
@@ -234,7 +265,7 @@ const JiaguanSection = () => {
 
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-1.png"
-            alt="夹关镇生活"
+            alt="Jiaguan life"
             className="w-26 h-28 sm:w-32 sm:h-36 md:w-48 md:h-52 lg:w-56 lg:h-64 xl:w-64 xl:h-72 right-[3%] top-[32%] sm:right-[4%] sm:top-[34%] lg:right-[5%] lg:top-[35%]"
             rotate={-4}
             delay={0.25}
@@ -243,7 +274,7 @@ const JiaguanSection = () => {
 
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-7.png"
-            alt="夹关镇古迹"
+            alt="Jiaguan heritage"
             className="w-36 h-22 sm:w-44 sm:h-28 md:w-60 md:h-36 lg:w-72 lg:h-44 xl:w-80 xl:h-48 left-[0%] bottom-[3%] sm:bottom-[4%] lg:bottom-[5%]"
             rotate={3}
             delay={0.3}
@@ -252,7 +283,7 @@ const JiaguanSection = () => {
 
           <StackedPhoto
             src="/images/residency/jiaguan/jiaguan-2.png"
-            alt="夹关镇美食"
+            alt="Jiaguan cuisine"
             className="w-40 h-26 sm:w-52 sm:h-32 md:w-72 md:h-44 lg:w-84 lg:h-52 xl:w-96 xl:h-56 right-[8%] bottom-[0%] sm:right-[10%] lg:right-[15%]"
             rotate={-2}
             delay={0.35}
@@ -261,53 +292,48 @@ const JiaguanSection = () => {
         </div>
 
         <FadeInSection className="text-center mb-12">
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <p
+            className="text-[#9C9C9C] mb-8"
+            style={{
+              fontFamily: "'Helvetica Neue', sans-serif",
+              fontSize: 'clamp(16px, 1.8vw, 24px)',
+              fontWeight: 200
+            }}
+          >
+            Jiaguan Project Framework
+          </p>
+          <div className="flex items-center justify-center gap-4">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#DADADA]" />
-            <p
-              className="text-[#6E6E6E] px-4"
-              style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
-                fontSize: 'clamp(14px, 1.5vw, 20px)'
-              }}
-            >
-              在夹关，艺术家可以围绕以下方向展开实践
-            </p>
+            <div className="w-2 h-2 rounded-full bg-[#C35900]/30" />
             <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#DADADA]" />
           </div>
         </FadeInSection>
 
         <div className="space-y-16 lg:space-y-20 mb-16 lg:mb-24">
           <CreativeDirection
-            title="河畔夜游与灯光 / 投影创作"
-            description="以白沫江两岸为幕布，结合水面倒影、桥梁、古建筑群落进行光影介入与夜间表演。"
+            title="Riverfront Light & Projection Works"
+            description="Site-responsive light installations and projection-based works developed for riverfront and night-time public spaces."
             delay={0.1}
           />
 
           <CreativeDirection
-            title="市井气息 × 社群共创"
-            description="以老街、码头、茶市等公共空间为现场，与居民、手艺人及游客共同完成参与式作品。"
+            title="Performance & Live Practices"
+            description="Live works in public and outdoor settings drawing from local landscapes and everyday life—rivers, bridges, tea hills, and markets—using movement, sound, ritual, or technology, and extending existing water-screen and fire-based performances for public presentation during the May Day festival."
             delay={0.15}
           />
 
           <CreativeDirection
-            title="茶马古道 × 声音档案"
-            description="沿茶马古道的历史路径，采集口述史、地景与遗存，发展声音档案或视觉叙事。"
+            title="Community-engaged Art"
+            description="Participatory projects developed with local residents and visitors, engaging shared memory, local history, and everyday experience."
             delay={0.2}
           />
-        </div>
 
-        <FadeInSection delay={0.25}>
-          <p
-            className="text-center text-[#6E6E6E] max-w-4xl mx-auto"
-            style={{
-              fontFamily: "'Huiwen-Fangsong', serif",
-              fontSize: 'clamp(16px, 1.8vw, 24px)',
-              lineHeight: 1.7
-            }}
-          >
-            驻地后期，夹关将作为主要展示与交流节点，部分作品计划在河畔公共空间或节日场景中与公众见面。
-          </p>
-        </FadeInSection>
+          <CreativeDirection
+            title="Photography and Moving Images"
+            description="Lens-based practices exploring place, landscape, and lived experience through photography, video, or hybrid moving-image works, presented in public exhibition contexts."
+            delay={0.25}
+          />
+        </div>
 
         <FadeInSection delay={0.3} className="flex justify-center mt-16">
           <div className="flex items-center gap-4">

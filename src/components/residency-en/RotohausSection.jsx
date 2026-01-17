@@ -63,13 +63,13 @@ const RotohausSection = () => {
               <h2
                 className="text-[#392C20] mb-4"
                 style={{
-                  fontFamily: "'FZFengRuSong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(36px, 4vw, 64px)',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   lineHeight: 1.2
                 }}
               >
-                艺术旷野｜无界之所
+                About the Organizer
               </h2>
               <p
                 className="text-[#392C20]/50 mb-8"
@@ -80,7 +80,7 @@ const RotohausSection = () => {
                   letterSpacing: '0.02em'
                 }}
               >
-                About the Organizer | Our Story
+                Our Story
               </p>
 
               {/* Divider - mobile only */}
@@ -95,28 +95,28 @@ const RotohausSection = () => {
               <h3
                 className="text-[#959726] lg:text-right"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(28px, 3.5vw, 48px)',
-                  fontWeight: 500,
+                  fontWeight: 300,
                   lineHeight: 1.3
                 }}
               >
-                关于发起方：野所ROTOHAUS
+                About ROTOHAUS
               </h3>
             </FadeInSection>
 
             {/* Description paragraphs */}
             <FadeInSection delay={0.2}>
               <p
-                className="text-[#6E6E6E] mb-6"
+                className="text-[#959726] mb-6"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(18px, 2vw, 28px)',
                   lineHeight: 1.8,
-                  fontWeight: 500
+                  fontWeight: 300
                 }}
               >
-                野所（Rotohaus）是一家于2025年创立于美国纽约曼哈顿的跨文化艺术工作室。我们以艺术疗愈、生活美学、非遗文化叙事为出发点，将传统工艺、手作体验、社交链接、艺术展览编织为新的系统。
+                ROTOHAUS is a heritage-rooted creative house founded in New York City in 2025. Through multisensory experiences, we weave tradition and innovation to renew the creative spirit.
               </p>
             </FadeInSection>
 
@@ -124,18 +124,32 @@ const RotohausSection = () => {
               <p
                 className="text-[#6E6E6E]"
                 style={{
-                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontFamily: "'Helvetica Neue', sans-serif",
                   fontSize: 'clamp(18px, 2vw, 28px)',
                   lineHeight: 1.8,
-                  fontWeight: 500
+                  fontWeight: 300
                 }}
               >
-                野所致力于构建一个跨文化、跨媒介、跨行业的文化生态系统：让全球各地的创作者、工匠、品牌、机构共同参与其中。
+                Grounded in art-based healing, everyday aesthetics, and narratives of intangible cultural heritage, ROTOHAUS develops new creative systems that integrate traditional craft, hands-on making, social connection, and exhibition-making.
+              </p>
+            </FadeInSection>
+
+            <FadeInSection delay={0.35}>
+              <p
+                className="text-[#6E6E6E] mt-6"
+                style={{
+                  fontFamily: "'Helvetica Neue', sans-serif",
+                  fontSize: 'clamp(18px, 2vw, 28px)',
+                  lineHeight: 1.8,
+                  fontWeight: 300
+                }}
+              >
+                ROTOHAUS is dedicated to building a cross-cultural, cross-media, and cross-disciplinary cultural ecosystem—bringing together artists, artisans, researchers, brands, and institutions from around the world through collaborative practice and shared inquiry.
               </p>
             </FadeInSection>
 
             {/* Decorative element */}
-            <FadeInSection delay={0.35} className="mt-10 flex items-center gap-4">
+            <FadeInSection delay={0.4} className="mt-10 flex items-center gap-4">
               <div className="flex-1 h-px bg-gradient-to-r from-[#959726]/30 to-transparent" />
               <div className="w-2 h-2 rounded-full bg-[#959726]/40" />
             </FadeInSection>
@@ -143,7 +157,7 @@ const RotohausSection = () => {
         </div>
 
         {/* Letter Image - constrained width on desktop */}
-        <FadeInSection delay={0.4} className="mt-16 sm:mt-20 lg:mt-28">
+        <FadeInSection delay={0.45} className="mt-16 sm:mt-20 lg:mt-28">
           <motion.div
             whileHover={{ scale: 1.005 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

@@ -147,23 +147,25 @@ const HeroSection = () => {
             <div className="flex items-center gap-4 mb-3">
               <div className="w-8 h-px bg-[#E2D19E]/40" />
               <p
-                className="text-[#E2D19E]/80 tracking-[0.2em]"
+                className="text-[#E2D19E]/80 tracking-[0.15em]"
                 style={{
-                  fontFamily: "'FZFengRuSong', serif",
-                  fontSize: 'clamp(12px, 1.5vw, 16px)'
+                  fontFamily: "'Helvetica Neue', sans-serif",
+                  fontSize: 'clamp(12px, 1.5vw, 16px)',
+                  fontWeight: 300
                 }}
               >
-                丙午年·春
+                Spring 2026
               </p>
             </div>
             <p
               className="text-[#E2D19E] hand-drawn-underline inline-block"
               style={{
-                fontFamily: "'FZFengRuSong', serif",
-                fontSize: 'clamp(20px, 2.5vw, 28px)'
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(18px, 2.2vw, 26px)',
+                fontWeight: 300
               }}
             >
-              国际非遗艺术驻地
+              International Artist Residency
             </p>
           </motion.div>
 
@@ -205,13 +207,13 @@ const HeroSection = () => {
             className="space-y-4 mb-12"
           >
             {[
-              { label: '地点', value: '中国 · 四川 · 邛崃' },
-              { label: '时间', value: '2026.03.13 – 04.15' },
-              { label: '截止', value: '2026.02.14' }
+              { label: 'Location', value: 'China · Qionglai' },
+              { label: 'Period', value: '2026.03.13 – 04.15' },
+              { label: 'Apply Before', value: '2026.02.14' }
             ].map((item, index) => (
               <div key={index} className="flex items-baseline gap-4">
                 <span
-                  className="text-[#E2D19E]/40 w-10"
+                  className="text-[#E2D19E]/40 w-20"
                   style={{
                     fontFamily: "'Helvetica Neue', sans-serif",
                     fontSize: '11px',
@@ -251,7 +253,7 @@ const HeroSection = () => {
               }}
             >
               <span className="relative z-10 flex items-center gap-2">
-                立即申请
+                Apply Now
                 <motion.span
                   className="inline-block"
                   animate={{ x: [0, 4, 0] }}
@@ -269,8 +271,11 @@ const HeroSection = () => {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="mt-16 pt-6 border-t border-white/10"
           >
-            <p className="text-white/40 text-[11px] tracking-widest mb-1">主办</p>
-            <p className="text-white/70 text-sm tracking-wide">野所 ROTOHAUS</p>
+            <p className="text-white/40 text-[11px] tracking-widest mb-1">Artist-found-and-led by</p>
+            <p className="text-white/70 text-sm tracking-wide">ROTOHAUS</p>
+            <p className="text-white/40 text-[10px] tracking-wide mt-3">
+              Supported by: Qionglai Municipal People's Government
+            </p>
           </motion.div>
         </div>
       </motion.div>
