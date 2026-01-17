@@ -137,7 +137,7 @@ const ApplicationSection = () => {
             />
             <TimelineItem
               label="最终招募结果公布"
-              value="2月20日"
+              value="2月16日"
               delay={0.25}
             />
           </div>

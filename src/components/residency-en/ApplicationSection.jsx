@@ -128,7 +128,7 @@ const ApplicationSection = () => {
             />
             <TimelineItem
               label="Final Results"
-              value="February 20th"
+              value="February 16th"
               delay={0.25}
             />
           </div>

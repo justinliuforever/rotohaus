@@ -16,8 +16,8 @@ const InfoCard = ({ icon, title, content, delay = 0 }) => {
 
         <div className="relative z-10">
           <motion.div
-            className="text-3xl mb-4"
-            whileHover={{ scale: 1.15, rotate: 5 }}
+            className="w-10 h-10 mb-4 text-[#476724]/70 group-hover:text-[#476724] transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
             {icon}
@@ -58,9 +58,55 @@ const InfoSection = () => {
 
   const decorY = useTransform(scrollYProgress, [0, 1], ['10%', '-10%']);
 
+  // SVG icon components
+  const icons = {
+    location: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+        <circle cx="12" cy="9" r="2.5" />
+      </svg>
+    ),
+    calendar: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </svg>
+    ),
+    clock: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
+    exhibition: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <circle cx="8.5" cy="8.5" r="1.5" />
+        <path d="M21 15l-5-5L5 21" />
+      </svg>
+    ),
+    artists: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+    support: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
+      </svg>
+    ),
+  };
+
   const infoCards = [
     {
-      icon: '📍',
+      icon: icons.location,
       title: 'Residency Location',
       content: (
         <>
@@ -71,7 +117,7 @@ const InfoSection = () => {
       )
     },
     {
-      icon: '📅',
+      icon: icons.calendar,
       title: 'Residency Period',
       content: (
         <>
@@ -82,17 +128,17 @@ const InfoSection = () => {
       )
     },
     {
-      icon: '⏰',
+      icon: icons.clock,
       title: 'Application Period',
       content: (
         <>
           <p><span className="opacity-70">Open Now – </span><span className="font-medium">February 14, 2026</span></p>
-          <p className="mt-2"><span className="opacity-70">Announcement: </span><span className="font-medium">February 26, 2026</span></p>
+          <p className="mt-2"><span className="opacity-70">Announcement: </span><span className="font-medium">February 16, 2026</span></p>
         </>
       )
     },
     {
-      icon: '🎨',
+      icon: icons.exhibition,
       title: 'Public Presentation',
       content: (
         <>
@@ -102,7 +148,7 @@ const InfoSection = () => {
       )
     },
     {
-      icon: '👥',
+      icon: icons.artists,
       title: 'Eligibility',
       content: (
         <>
@@ -113,7 +159,7 @@ const InfoSection = () => {
       )
     },
     {
-      icon: '✨',
+      icon: icons.support,
       title: 'Fees & Support',
       content: (
         <>
