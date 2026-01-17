@@ -1,22 +1,5 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-
-const FadeInSection = ({ children, delay = 0, className = '' }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30, filter: 'blur(4px)' }}
-      animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 0, y: 30, filter: 'blur(4px)' }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import { motion } from 'framer-motion';
+import FadeInSection from '../shared/FadeInSection';
 
 const TimelineItem = ({ label, value, delay = 0 }) => {
   return (
@@ -110,7 +93,7 @@ const ApplicationSection = () => {
             <img
               src="/images/residency/application/logo-alt.png"
               alt="Rotohaus"
-              className="w-28 h-28 lg:w-40 lg:h-40 opacity-90"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 opacity-90"
             />
             <div>
               <h2
@@ -127,7 +110,7 @@ const ApplicationSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <TimelineItem
               label="Residency Period"
               value="March 13 – April 15, 2026"
@@ -178,7 +161,7 @@ const ApplicationSection = () => {
           </p>
         </FadeInSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20 lg:mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 mb-16 md:mb-20 lg:mb-28">
           <FadeInSection delay={0.1}>
             <h3
               className="text-[#959726] mb-6"
@@ -289,7 +272,7 @@ const ApplicationSection = () => {
             <img
               src="/images/residency/application/ai-visual.png"
               alt="Art Residency Visual"
-              className="w-full h-64 lg:h-[480px] object-cover"
+              className="w-full h-48 sm:h-56 md:h-72 lg:h-96 xl:h-[480px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </motion.div>

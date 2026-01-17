@@ -25,7 +25,7 @@ const ScheduleSection = () => {
             <img
               src="/images/residency/schedule/logo-alt.png"
               alt="Rotohaus"
-              className="w-16 h-16 lg:w-20 lg:h-20 opacity-80"
+              className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 opacity-80"
             />
             <div className="h-12 w-px bg-[#392C20]/15" />
             <div>

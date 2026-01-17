@@ -1,22 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-
-const FadeInSection = ({ children, delay = 0, className = '' }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30, filter: 'blur(4px)' }}
-      animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 0, y: 30, filter: 'blur(4px)' }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import FadeInSection from '../shared/FadeInSection';
 
 const TeamMemberCard = ({ name, nameZh, role, roleEn, description, image, delay = 0, align = 'left' }) => {
   const cardRef = useRef(null);
@@ -281,7 +265,7 @@ const TeamSection = () => {
             <img
               src="/images/residency/application/logo-alt.png"
               alt="Rotohaus"
-              className="w-28 h-28 lg:w-36 lg:h-36 opacity-90"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 opacity-90"
             />
             <div>
               <h2
@@ -333,7 +317,7 @@ const TeamSection = () => {
             <img
               src="/images/residency/application/logo-alt.png"
               alt="Rotohaus"
-              className="w-28 h-28 lg:w-36 lg:h-36 opacity-90"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 opacity-90"
             />
             <div>
               <h2

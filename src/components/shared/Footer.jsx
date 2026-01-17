@@ -154,7 +154,7 @@ const Footer = () => {
               © 2026 ROTOHAUS. All rights reserved.
             </p>
             <p className="text-white/30 text-xs tracking-wide">
-              New York · Chengdu
+              New York, USA · Chengdu, China
             </p>
           </div>
         </FadeIn>
