@@ -50,6 +50,31 @@ docs/
 | `/experience` | 🔜 Planned | ROTO Experience |
 | `/lab` | 🔜 Planned | ROTO Material Lab |
 
+## Deployment
+
+### Alibaba Cloud Lightweight Server (AlibabaCloudLinux-euhg)
+
+**Initial Deployment:**
+```bash
+cd /root/rotohaus
+chmod +x deploy.sh
+sudo bash deploy.sh
+```
+
+**Update Website:**
+```bash
+cd /root/rotohaus
+bash update.sh
+```
+
+The deployment script automatically:
+- Installs Node.js (if needed)
+- Builds production files
+- Configures Nginx
+- Serves static files from `/var/www/rotohaus/`
+
+**Access:** `http://8.131.77.133/residency`
+
 ## Fonts
 
 - Instrument Serif (Google Fonts)
