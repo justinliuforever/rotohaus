@@ -1,22 +1,5 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-
-const FadeInSection = ({ children, delay = 0, className = '' }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30, filter: 'blur(4px)' }}
-      animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 0, y: 30, filter: 'blur(4px)' }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import { motion } from 'framer-motion';
+import FadeInSection from '../shared/FadeInSection';
 
 const Highlight = ({ children, type = 'location' }) => {
   const styles = {
@@ -316,7 +299,7 @@ const ScheduleSection = () => {
 
         <FadeInSection delay={0.3} className="mt-16 lg:mt-24">
           <p
-            className="text-[#BEBEBE]"
+            className="text-[#BEBEBE] mb-8"
             style={{
               fontFamily: "'Huiwen-Fangsong', serif",
               fontSize: 'clamp(13px, 1.2vw, 16px)'
@@ -324,6 +307,20 @@ const ScheduleSection = () => {
           >
             * 以上流程可根据艺术家创作需求灵活调整
           </p>
+          <a
+            href="#process"
+            className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
+          >
+            <span
+              style={{
+                fontFamily: "'Huiwen-Fangsong', serif",
+                fontSize: 'clamp(14px, 1.4vw, 18px)'
+              }}
+            >
+              查看申请详情
+            </span>
+            <span>→</span>
+          </a>
         </FadeInSection>
       </div>
     </section>

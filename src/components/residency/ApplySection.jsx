@@ -1,22 +1,5 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-
-const FadeInSection = ({ children, delay = 0, className = '' }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30, filter: 'blur(4px)' }}
-      animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 0, y: 30, filter: 'blur(4px)' }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import { motion } from 'framer-motion';
+import FadeInSection from '../shared/FadeInSection';
 
 const MaterialItem = ({ title, description, delay = 0 }) => {
   return (
@@ -93,12 +76,34 @@ const ApplySection = () => {
   ];
 
   return (
-    <section className="relative py-24 lg:py-40 bg-white overflow-hidden">
+    <section className="relative py-24 lg:py-40 bg-gradient-to-b from-[#476724]/[0.03] via-white to-white overflow-hidden">
       <div className="paper-texture absolute inset-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12">
 
-        <FadeInSection className="mb-12">
+        {/* 主 CTA 按钮 */}
+        <FadeInSection className="flex justify-center mb-16 lg:mb-20">
+          <motion.a
+            href="mailto:residency@rotohaus.com?subject=【烟火邛州驻地申请｜姓名】"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#476724] text-white rounded-full shadow-md hover:shadow-lg transition-all"
+            whileHover={{ scale: 1.02, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span
+              style={{
+                fontFamily: "'Huiwen-Fangsong', serif",
+                fontSize: 'clamp(18px, 2vw, 24px)'
+              }}
+            >
+              立即申请
+            </span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </motion.a>
+        </FadeInSection>
+
+        <FadeInSection delay={0.1} className="mb-12">
           <div className="flex items-start gap-6">
             <img
               src="/images/residency/application/logo-alt.png"

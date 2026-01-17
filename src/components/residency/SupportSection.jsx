@@ -1,22 +1,4 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-
-const FadeInSection = ({ children, delay = 0, className = '' }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30, filter: 'blur(4px)' }}
-      animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 0, y: 30, filter: 'blur(4px)' }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import FadeInSection from '../shared/FadeInSection';
 
 const SupportCategory = ({ title, items, delay = 0 }) => {
   return (
@@ -191,7 +173,24 @@ const SupportSection = () => {
           ))}
         </div>
 
-        <FadeInSection delay={0.8} className="flex justify-center mt-20 lg:mt-28">
+        <FadeInSection delay={0.8} className="mt-16 lg:mt-20">
+          <a
+            href="#process"
+            className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
+          >
+            <span
+              style={{
+                fontFamily: "'Huiwen-Fangsong', serif",
+                fontSize: 'clamp(14px, 1.4vw, 18px)'
+              }}
+            >
+              了解申请要求
+            </span>
+            <span>→</span>
+          </a>
+        </FadeInSection>
+
+        <FadeInSection delay={0.9} className="flex justify-center mt-16 lg:mt-24">
           <div className="flex items-center gap-4">
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#392C20]/15 to-transparent" />
             <div className="w-1.5 h-1.5 rounded-full bg-[#959726]/30" />
