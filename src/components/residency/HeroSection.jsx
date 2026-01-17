@@ -163,7 +163,7 @@ const HeroSection = () => {
                 fontSize: 'clamp(20px, 2.5vw, 28px)'
               }}
             >
-              国际非遗艺术驻地
+              烟火邛州国际非遗艺术驻地
             </p>
           </motion.div>
 
@@ -206,12 +206,12 @@ const HeroSection = () => {
           >
             {[
               { label: '地点', value: '中国 · 四川 · 邛崃' },
-              { label: '时间', value: '2026.03.13 – 04.15' },
-              { label: '截止', value: '2026.02.14' }
+              { label: '驻地周期', value: '2026.03.13 – 04.15' },
+              { label: '申请截止', value: '2026.02.14' }
             ].map((item, index) => (
               <div key={index} className="flex items-baseline gap-4">
                 <span
-                  className="text-[#E2D19E]/40 w-10"
+                  className="text-[#E2D19E]/40 w-16"
                   style={{
                     fontFamily: "'Helvetica Neue', sans-serif",
                     fontSize: '11px',
