@@ -175,7 +175,7 @@ const SupportSection = () => {
 
         <FadeInSection delay={0.8} className="mt-16 lg:mt-20">
           <a
-            href="#process"
+            href="#apply"
             className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
           >
             <span
@@ -184,7 +184,7 @@ const SupportSection = () => {
                 fontSize: 'clamp(14px, 1.4vw, 18px)'
               }}
             >
-              了解申请要求
+              了解申请方式
             </span>
             <span>→</span>
           </a>

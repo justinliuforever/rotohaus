@@ -158,7 +158,7 @@ const SupportSection = () => {
 
         <FadeInSection delay={0.8} className="mt-16 lg:mt-20">
           <a
-            href="#process"
+            href="#apply"
             className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
           >
             <span
@@ -168,7 +168,7 @@ const SupportSection = () => {
                 fontWeight: 400
               }}
             >
-              Learn About Application Requirements
+              Learn How to Apply
             </span>
             <span>→</span>
           </a>

@@ -15,17 +15,20 @@ const IntroSection = () => {
     {
       image: '/images/residency/intro/qiongyao-park.png',
       title: '邛窑国家考古遗址公园',
-      titleEn: 'Qiongyao National Archaeological Site Park'
+      titleEn: 'Qiongyao National Archaeological Site Park',
+      href: '#qiongyao'
     },
     {
       image: '/images/residency/intro/jiaguan-town.png',
       title: '夹关古镇',
-      titleEn: 'Jiaguan Ancient Town'
+      titleEn: 'Jiaguan Ancient Town',
+      href: '#jiaguan'
     },
     {
       image: '/images/residency/intro/landin-fang.png',
       title: '临济镇蓝靛坊',
-      titleEn: 'Landin Workshop, Linji Town'
+      titleEn: 'Landin Workshop, Linji Town',
+      href: '#landianfang'
     }
   ];
 
@@ -131,10 +134,11 @@ const IntroSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           <FadeInSection className="lg:col-span-7">
-            <motion.div
+            <motion.a
+              href={locations[0].href}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl shadow-lg shadow-black/5"
+              className="group block relative overflow-hidden rounded-2xl shadow-lg shadow-black/5 cursor-pointer"
             >
               <img
                 src={locations[0].image}
@@ -155,14 +159,15 @@ const IntroSection = () => {
                 </p>
                 <p className="text-white/50 text-sm tracking-wide">{locations[0].titleEn}</p>
               </div>
-            </motion.div>
+            </motion.a>
           </FadeInSection>
 
           <FadeInSection delay={0.15} className="lg:col-span-5 lg:mt-12">
-            <motion.div
+            <motion.a
+              href={locations[1].href}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl shadow-lg shadow-black/5"
+              className="group block relative overflow-hidden rounded-2xl shadow-lg shadow-black/5 cursor-pointer"
             >
               <img
                 src={locations[1].image}
@@ -183,14 +188,15 @@ const IntroSection = () => {
                 </p>
                 <p className="text-white/50 text-sm tracking-wide">{locations[1].titleEn}</p>
               </div>
-            </motion.div>
+            </motion.a>
           </FadeInSection>
 
           <FadeInSection delay={0.3} className="lg:col-span-6 lg:col-start-4">
-            <motion.div
+            <motion.a
+              href={locations[2].href}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-2xl shadow-lg shadow-black/5"
+              className="group block relative overflow-hidden rounded-2xl shadow-lg shadow-black/5 cursor-pointer"
             >
               <img
                 src={locations[2].image}
@@ -211,7 +217,7 @@ const IntroSection = () => {
                 </p>
                 <p className="text-white/50 text-sm tracking-wide">{locations[2].titleEn}</p>
               </div>
-            </motion.div>
+            </motion.a>
           </FadeInSection>
         </div>
       </div>

@@ -43,7 +43,9 @@ const ResidencyPageEN = () => {
       {/* Process - Application related */}
       <div id="process">
         <ScheduleSection />
-        <ApplicationSection />
+        <div id="requirements">
+          <ApplicationSection />
+        </div>
         <SupportSection />
         <ApplySection />
       </div>

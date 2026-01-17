@@ -128,6 +128,25 @@ const QASection = () => {
           />
         ))}
 
+        {/* Apply CTA */}
+        <FadeInSection delay={0.55} className="mt-16 lg:mt-20">
+          <a
+            href="#apply"
+            className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
+          >
+            <span
+              style={{
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(14px, 1.4vw, 18px)',
+                fontWeight: 400
+              }}
+            >
+              Learn How to Apply
+            </span>
+            <span>→</span>
+          </a>
+        </FadeInSection>
+
         {/* Bottom decoration */}
         <FadeInSection delay={0.6} className="flex justify-center mt-20 lg:mt-28">
           <div className="flex items-center gap-4">

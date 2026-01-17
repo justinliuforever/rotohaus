@@ -5,6 +5,7 @@ const sections = [
   { id: 'hero', label: '首页', labelEn: 'Home' },
   { id: 'venues', label: '场域', labelEn: 'Venues' },
   { id: 'process', label: '流程', labelEn: 'Process' },
+  { id: 'requirements', label: '申请要求', labelEn: 'Requirements' },
   { id: 'qa', label: '问答', labelEn: 'Q&A' },
   { id: 'team', label: '团队', labelEn: 'Team' },
   { id: 'about', label: '关于', labelEn: 'About' }

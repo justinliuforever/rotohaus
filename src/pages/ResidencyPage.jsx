@@ -43,7 +43,9 @@ const ResidencyPage = () => {
       {/* 流程 - 申请相关 */}
       <div id="process">
         <ScheduleSection />
-        <ApplicationSection />
+        <div id="requirements">
+          <ApplicationSection />
+        </div>
         <SupportSection />
         <ApplySection />
       </div>

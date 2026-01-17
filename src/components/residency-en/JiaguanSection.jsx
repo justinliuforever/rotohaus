@@ -64,6 +64,7 @@ const JiaguanSection = () => {
 
   return (
     <section
+      id="jiaguan"
       ref={containerRef}
       className="relative py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 bg-[#FAFAF8] overflow-hidden"
     >
