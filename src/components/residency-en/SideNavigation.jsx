@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const sections = [
   { id: 'hero', label: 'Home', labelZh: '首页' },
+  { id: 'artists', label: 'Artists', labelZh: '艺术家' },
   { id: 'venues', label: 'Venues', labelZh: '场域' },
   { id: 'process', label: 'Process', labelZh: '流程' },
-  { id: 'requirements', label: 'Requirements', labelZh: '申请要求' },
+  { id: 'requirements', label: 'Program Info', labelZh: '项目信息' },
   { id: 'qa', label: 'Q&A', labelZh: '问答' },
   { id: 'team', label: 'Team', labelZh: '团队' },
   { id: 'about', label: 'About', labelZh: '关于' }

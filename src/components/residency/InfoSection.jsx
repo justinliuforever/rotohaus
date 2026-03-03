@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import FadeInSection from '../shared/FadeInSection';
 
 const InfoCard = ({ icon, title, content, delay = 0 }) => {
@@ -128,11 +129,11 @@ const InfoSection = () => {
     },
     {
       icon: icons.clock,
-      title: '重要日期',
+      title: '招募结果',
       content: (
         <>
-          <p><span className="opacity-70">招募截止：</span><span className="font-medium">2026.02.14</span></p>
-          <p className="mt-2"><span className="opacity-70">入选公布：</span><span className="font-medium">2026.02.16</span></p>
+          <p className="font-medium text-[#476724]">10 组艺术家入选</p>
+          <p className="mt-2 text-sm">来自中国、美国、英国等地</p>
         </>
       )
     },
@@ -148,12 +149,12 @@ const InfoSection = () => {
     },
     {
       icon: icons.artists,
-      title: '招募对象',
+      title: '驻留方向',
       content: (
         <>
-          <p className="font-medium">艺术家 / 跨媒介创作者</p>
-          <p className="mt-2 text-sm">个人或小组均可</p>
-          <p className="mt-2"><span className="opacity-70">名额：</span><span className="font-medium text-[#476724]">5–10 位（组）</span></p>
+          <p className="font-medium">跨媒介创作 · 在地研究</p>
+          <p className="mt-2 text-sm">10 位（组）艺术家</p>
+          <p className="mt-2"><span className="opacity-70">媒介涵盖</span><span className="font-medium text-[#476724]"> 影像、装置、剧场、陶艺等</span></p>
         </>
       )
     },
@@ -255,32 +256,30 @@ const InfoSection = () => {
         </div>
 
         <FadeInSection delay={0.5} className="text-center mt-16 lg:mt-24">
-          <motion.a
-            href="#apply"
-            whileHover={{ scale: 1.03, y: -3 }}
-            whileTap={{ scale: 0.98 }}
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-[#476724] text-white rounded-full shadow-lg shadow-[#476724]/25 transition-all duration-300 hover:shadow-xl hover:shadow-[#476724]/30"
-            style={{
-              fontFamily: "'Helvetica Neue', sans-serif",
-              fontSize: 'clamp(16px, 1.5vw, 20px)',
-              fontWeight: 500
-            }}
-          >
-            <span>立即申请</span>
-            <motion.svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          <Link to="/residency/artists" className="inline-block">
+            <motion.div
+              whileHover={{ scale: 1.03, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+              className="group inline-flex items-center gap-3 px-10 py-5 bg-[#476724] text-white rounded-full shadow-lg shadow-[#476724]/25 transition-all duration-300 hover:shadow-xl hover:shadow-[#476724]/30"
+              style={{
+                fontFamily: "'Huiwen-Fangsong', serif",
+                fontSize: 'clamp(16px, 1.5vw, 20px)',
+                fontWeight: 500
+              }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </motion.svg>
-          </motion.a>
-          <p className="mt-5 text-[#392C20]/45 text-sm tracking-wide">
-            申请截止：2026年2月14日
-          </p>
+              <span>认识驻留艺术家</span>
+              <motion.svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </motion.svg>
+            </motion.div>
+          </Link>
         </FadeInSection>
       </div>
     </section>

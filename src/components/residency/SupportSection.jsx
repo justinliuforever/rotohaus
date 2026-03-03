@@ -173,23 +173,6 @@ const SupportSection = () => {
           ))}
         </div>
 
-        <FadeInSection delay={0.8} className="mt-16 lg:mt-20">
-          <a
-            href="#apply"
-            className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
-          >
-            <span
-              style={{
-                fontFamily: "'Huiwen-Fangsong', serif",
-                fontSize: 'clamp(14px, 1.4vw, 18px)'
-              }}
-            >
-              了解申请方式
-            </span>
-            <span>→</span>
-          </a>
-        </FadeInSection>
-
         <FadeInSection delay={0.9} className="flex justify-center mt-16 lg:mt-24">
           <div className="flex items-center gap-4">
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#392C20]/15 to-transparent" />

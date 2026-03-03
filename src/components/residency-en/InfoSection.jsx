@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import FadeInSection from '../shared/FadeInSection';
 
 const InfoCard = ({ icon, title, content, delay = 0 }) => {
@@ -129,11 +130,11 @@ const InfoSection = () => {
     },
     {
       icon: icons.clock,
-      title: 'Application Period',
+      title: 'Selection',
       content: (
         <>
-          <p><span className="opacity-70">Open Now – </span><span className="font-medium">February 14, 2026</span></p>
-          <p className="mt-2"><span className="opacity-70">Announcement: </span><span className="font-medium">February 16, 2026</span></p>
+          <p className="font-medium text-[#476724]">10 Artists / Groups Selected</p>
+          <p className="mt-2 text-sm">From China, USA, UK, and more</p>
         </>
       )
     },
@@ -149,12 +150,12 @@ const InfoSection = () => {
     },
     {
       icon: icons.artists,
-      title: 'Eligibility',
+      title: 'Program Focus',
       content: (
         <>
-          <p className="font-medium">Artists & cross-disciplinary practitioners</p>
-          <p className="mt-2 text-sm">Individual applicants or small groups are welcome</p>
-          <p className="mt-2"><span className="opacity-70">Slots: </span><span className="font-medium text-[#476724]">5–10 artists (groups)</span></p>
+          <p className="font-medium">Cross-media creation & Site-specific research</p>
+          <p className="mt-2 text-sm">10 artists (groups)</p>
+          <p className="mt-2"><span className="opacity-70">Media: </span><span className="font-medium text-[#476724]">Film, Installation, Theatre, Ceramics & more</span></p>
         </>
       )
     },
@@ -256,32 +257,30 @@ const InfoSection = () => {
         </div>
 
         <FadeInSection delay={0.5} className="text-center mt-16 lg:mt-24">
-          <motion.a
-            href="#apply"
-            whileHover={{ scale: 1.03, y: -3 }}
-            whileTap={{ scale: 0.98 }}
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-[#476724] text-white rounded-full shadow-lg shadow-[#476724]/25 transition-all duration-300 hover:shadow-xl hover:shadow-[#476724]/30"
-            style={{
-              fontFamily: "'Helvetica Neue', sans-serif",
-              fontSize: 'clamp(16px, 1.5vw, 20px)',
-              fontWeight: 500
-            }}
-          >
-            <span>Apply Now</span>
-            <motion.svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          <Link to="/residency/en/artists" className="inline-block">
+            <motion.div
+              whileHover={{ scale: 1.03, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+              className="group inline-flex items-center gap-3 px-10 py-5 bg-[#476724] text-white rounded-full shadow-lg shadow-[#476724]/25 transition-all duration-300 hover:shadow-xl hover:shadow-[#476724]/30"
+              style={{
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(16px, 1.5vw, 20px)',
+                fontWeight: 500
+              }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </motion.svg>
-          </motion.a>
-          <p className="mt-5 text-[#392C20]/45 text-sm tracking-wide">
-            Application Deadline: February 14, 2026
-          </p>
+              <span>Meet the Artists</span>
+              <motion.svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </motion.svg>
+            </motion.div>
+          </Link>
         </FadeInSection>
       </div>
     </section>

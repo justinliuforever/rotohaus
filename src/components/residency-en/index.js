@@ -1,6 +1,8 @@
 export { default as HeroSection } from './HeroSection';
 export { default as IntroSection } from './IntroSection';
 export { default as InfoSection } from './InfoSection';
+export { default as ArtistsSection } from './ArtistsSection';
+export { default as ArtistsPreview } from './ArtistsPreview';
 export { default as JiaguanSection } from './JiaguanSection';
 export { default as QiongyaoSection } from './QiongyaoSection';
 export { default as LandianfangSection } from './LandianfangSection';

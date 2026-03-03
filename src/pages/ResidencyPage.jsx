@@ -2,6 +2,7 @@ import {
   HeroSection,
   IntroSection,
   InfoSection,
+  ArtistsPreview,
   JiaguanSection,
   QiongyaoSection,
   LandianfangSection,
@@ -31,6 +32,11 @@ const ResidencyPage = () => {
         <HeroSection />
         <IntroSection />
         <InfoSection />
+      </div>
+
+      {/* 艺术家阵容 */}
+      <div id="artists">
+        <ArtistsPreview />
       </div>
 
       {/* 场域 - 三个驻地地点 */}

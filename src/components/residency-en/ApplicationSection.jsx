@@ -105,7 +105,7 @@ const ApplicationSection = () => {
                   lineHeight: 1.15
                 }}
               >
-                Application Timeline
+                Project Timeline
               </h2>
             </div>
           </div>
@@ -117,18 +117,18 @@ const ApplicationSection = () => {
               delay={0.1}
             />
             <TimelineItem
-              label="Application Period"
-              value="Now – February 14, 2026"
+              label="Recruitment Completed"
+              value="✓ Closed · February 14, 2026"
               delay={0.15}
             />
             <TimelineItem
               label="First Round Results"
-              value="February 1st"
+              value="✓ February 1st"
               delay={0.2}
             />
             <TimelineItem
               label="Final Results"
-              value="February 16th"
+              value="✓ February 16th"
               delay={0.25}
             />
           </div>
@@ -145,7 +145,7 @@ const ApplicationSection = () => {
                 lineHeight: 1.15
               }}
             >
-              Who Are We Looking For?
+              Program Focus
             </h2>
           </div>
           <p
@@ -157,7 +157,7 @@ const ApplicationSection = () => {
               fontWeight: 300
             }}
           >
-            *We welcome diverse experimental practices and encourage cross-media collaborative creation and dialogue. Artists from all backgrounds are invited to apply.
+            *This residency welcomes diverse experimental practices and encourages cross-media collaborative creation and dialogue. The selected artists represent a wide range of backgrounds and disciplines.
           </p>
         </FadeInSection>
 
@@ -216,7 +216,7 @@ const ApplicationSection = () => {
                 lineHeight: 1
               }}
             >
-              Number of Positions
+              Selected Artists
             </h3>
             <span
               className="text-[#392C20] pb-1"
@@ -226,7 +226,7 @@ const ApplicationSection = () => {
                 fontWeight: 400
               }}
             >
-              5 – 10 Artists (or Groups)
+              10 Artists (or Groups)
             </span>
           </div>
         </FadeInSection>

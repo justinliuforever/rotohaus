@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import FadeInSection from '../shared/FadeInSection';
 
 const Highlight = ({ children, type = 'location' }) => {
@@ -307,8 +308,8 @@ const ScheduleSection = () => {
           >
             * 以上流程可根据艺术家创作需求灵活调整
           </p>
-          <a
-            href="#process"
+          <Link
+            to="/residency/artists"
             className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
           >
             <span
@@ -317,10 +318,10 @@ const ScheduleSection = () => {
                 fontSize: 'clamp(14px, 1.4vw, 18px)'
               }}
             >
-              查看申请详情
+              认识驻留艺术家
             </span>
             <span>→</span>
-          </a>
+          </Link>
         </FadeInSection>
       </div>
     </section>

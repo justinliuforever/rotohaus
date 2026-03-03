@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import FadeInSection from '../shared/FadeInSection';
 
 const Highlight = ({ children, type = 'location' }) => {
@@ -315,8 +316,8 @@ const ScheduleSection = () => {
           >
             * The schedule above can be flexibly adjusted based on artists' creative needs.
           </p>
-          <a
-            href="#process"
+          <Link
+            to="/residency/en/artists"
             className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
           >
             <span
@@ -326,10 +327,10 @@ const ScheduleSection = () => {
                 fontWeight: 400
               }}
             >
-              View Application Details
+              Meet the Artists
             </span>
             <span>→</span>
-          </a>
+          </Link>
         </FadeInSection>
       </div>
     </section>

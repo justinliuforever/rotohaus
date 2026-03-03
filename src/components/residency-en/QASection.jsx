@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import FadeInSection from '../shared/FadeInSection';
 
 const QAItem = ({ question, answer, delay = 0 }) => {
@@ -127,25 +126,6 @@ const QASection = () => {
             delay={0.15 + i * 0.1}
           />
         ))}
-
-        {/* Apply CTA */}
-        <FadeInSection delay={0.55} className="mt-16 lg:mt-20">
-          <a
-            href="#apply"
-            className="inline-flex items-center gap-2 text-[#476724] hover:text-[#476724]/80 transition-colors"
-          >
-            <span
-              style={{
-                fontFamily: "'Helvetica Neue', sans-serif",
-                fontSize: 'clamp(14px, 1.4vw, 18px)',
-                fontWeight: 400
-              }}
-            >
-              Learn How to Apply
-            </span>
-            <span>→</span>
-          </a>
-        </FadeInSection>
 
         {/* Bottom decoration */}
         <FadeInSection delay={0.6} className="flex justify-center mt-20 lg:mt-28">

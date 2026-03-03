@@ -104,7 +104,7 @@ const ApplicationSection = () => {
                   lineHeight: 1.15
                 }}
               >
-                申请时间
+                项目时间线
               </h2>
               <p
                 className="text-[#392C20]/60"
@@ -126,18 +126,18 @@ const ApplicationSection = () => {
               delay={0.1}
             />
             <TimelineItem
-              label="申请时间"
-              value="即日起至2026年2月14日"
+              label="招募完成"
+              value="✓ 即日起至2026年2月14日"
               delay={0.15}
             />
             <TimelineItem
               label="首批入选者公布"
-              value="2月1日"
+              value="✓ 2月1日"
               delay={0.2}
             />
             <TimelineItem
               label="最终招募结果公布"
-              value="2月16日"
+              value="✓ 2月16日"
               delay={0.25}
             />
           </div>
@@ -154,7 +154,7 @@ const ApplicationSection = () => {
                 lineHeight: 1.15
               }}
             >
-              招募对象
+              驻留方向
             </h2>
             <p
               className="text-[#392C20]/60"
@@ -164,7 +164,7 @@ const ApplicationSection = () => {
                 fontWeight: 200
               }}
             >
-              Who Are We Looking for?
+              Creative Directions
             </p>
           </div>
           <p
@@ -175,7 +175,7 @@ const ApplicationSection = () => {
               lineHeight: 1.6
             }}
           >
-            *我们欢迎多元的实验性实践，鼓励跨媒介的合作创作与对话，诚邀各类背景的艺术家报名参与。
+            *本次驻留欢迎多元的实验性实践，鼓励跨媒介的合作创作与对话，入选艺术家涵盖以下方向。
           </p>
         </FadeInSection>
 
@@ -234,7 +234,7 @@ const ApplicationSection = () => {
                 lineHeight: 1
               }}
             >
-              招募人数
+              入选人数
             </h3>
             <span
               className="text-[#392C20] pb-1"

@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const containerRef = useRef(null);
@@ -194,7 +195,7 @@ const HeroSection = () => {
                 letterSpacing: '0.05em'
               }}
             >
-              Art Residency · Open Call
+              Art Residency · Spring 2026
             </p>
           </motion.div>
 
@@ -207,7 +208,7 @@ const HeroSection = () => {
             {[
               { label: '地点', value: '中国 · 四川 · 邛崃' },
               { label: '驻地周期', value: '2026.03.13 – 04.15' },
-              { label: '申请截止', value: '2026.02.14' }
+              { label: '入选艺术家', value: '10 组' }
             ].map((item, index) => (
               <div key={index} className="flex items-baseline gap-4">
                 <span
@@ -239,29 +240,30 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.a
-              href="#apply"
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative inline-block px-8 py-4 bg-[#E2D19E] text-[#392C20] rounded-full overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-[#E2D19E]/20"
-              style={{
-                fontFamily: "'Helvetica Neue', sans-serif",
-                fontSize: 'clamp(13px, 1.3vw, 16px)',
-                fontWeight: 500,
-                letterSpacing: '0.02em'
-              }}
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                立即申请
-                <motion.span
-                  className="inline-block"
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  →
-                </motion.span>
-              </span>
-            </motion.a>
+            <Link to="/residency/artists" className="inline-block">
+              <motion.div
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative inline-block px-8 py-4 bg-[#E2D19E] text-[#392C20] rounded-full overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-[#E2D19E]/20"
+                style={{
+                  fontFamily: "'Huiwen-Fangsong', serif",
+                  fontSize: 'clamp(13px, 1.3vw, 16px)',
+                  fontWeight: 500,
+                  letterSpacing: '0.02em'
+                }}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  探索艺术家阵容
+                  <motion.span
+                    className="inline-block"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.div>
+            </Link>
           </motion.div>
 
           <motion.div

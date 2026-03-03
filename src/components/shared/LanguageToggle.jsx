@@ -8,10 +8,11 @@ const LanguageToggle = () => {
   const isEnglish = location.pathname.includes('/en');
 
   const toggleLanguage = () => {
+    const path = location.pathname;
     if (isEnglish) {
-      navigate('/residency');
+      navigate(path.replace('/residency/en', '/residency'));
     } else {
-      navigate('/residency/en');
+      navigate(path.replace('/residency', '/residency/en'));
     }
   };
 
