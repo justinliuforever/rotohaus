@@ -83,7 +83,7 @@ const ArtistPortrait = ({ member, accentColor, solo = false }) => (
         lineHeight: 2,
         fontWeight: 500,
         color: '#666',
-        maxWidth: solo ? '520px' : '380px',
+        maxWidth: solo ? '580px' : '400px',
         margin: '0 auto'
       }}
     >
@@ -96,9 +96,9 @@ const ArtistGroupCard = ({ groupName, members, medium, accentColor }) => {
   const isSolo = members.length === 1;
 
   return (
-    <div className="mb-20 lg:mb-28">
+    <div className="mb-16 lg:mb-22">
       {/* Group / Artist name */}
-      <div className={`mb-10 lg:mb-14 ${isSolo ? 'text-center' : ''}`}>
+      <div className={`mb-8 lg:mb-10 ${isSolo ? 'text-center' : ''}`}>
 
         <h3
           style={{
@@ -167,7 +167,7 @@ const ArtistGroupCard = ({ groupName, members, medium, accentColor }) => {
       )}
 
       {/* Divider between groups */}
-      <div className="flex justify-center mt-16 lg:mt-20">
+      <div className="flex justify-center mt-12 lg:mt-16">
         <div className="flex items-center gap-3">
           <div className="w-12 h-px" style={{ background: `linear-gradient(to right, transparent, ${accentColor}20)` }} />
           <div className="w-1 h-1 rounded-full" style={{ background: `${accentColor}30` }} />
@@ -362,7 +362,7 @@ const ArtistsSection = () => {
                 className="text-[#392C20]/60 mt-2"
                 style={{
                   fontFamily: "'Helvetica Neue', sans-serif",
-                  fontSize: 'clamp(20px, 2.5vw, 44px)',
+                  fontSize: 'clamp(18px, 2vw, 32px)',
                   fontWeight: 200
                 }}
               >
@@ -395,6 +395,92 @@ const ArtistsSection = () => {
             {...group}
           />
         ))}
+
+        {/* ═══ Flying Artists Section ═══ */}
+        <div className="mt-16 lg:mt-28 mb-12 lg:mb-16">
+          {/* Category divider line */}
+          <div className="flex items-center gap-6 mb-12 lg:mb-16">
+            <div className="h-px flex-grow" style={{ background: 'linear-gradient(to right, transparent, #7E79D640, transparent)' }} />
+            <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#7E79D640' }} />
+            <div className="h-px flex-grow" style={{ background: 'linear-gradient(to left, transparent, #7E79D640, transparent)' }} />
+          </div>
+
+          {/* Flying Artists Header */}
+          <div className="mb-12 lg:mb-16">
+            <h2
+              className="text-[#392C20]"
+              style={{
+                fontFamily: "'FZFengRuSong', serif",
+                fontSize: 'clamp(32px, 4vw, 60px)',
+                fontWeight: 400,
+                lineHeight: 1.15
+              }}
+            >
+              飞行艺术家
+            </h2>
+            <p
+              className="text-[#7E79D6]/70 mt-2"
+              style={{
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(16px, 1.8vw, 28px)',
+                fontWeight: 200
+              }}
+            >
+              2026 Flying Artists
+            </p>
+          </div>
+
+          {/* Flying Artists Manifesto */}
+          <div className="mb-14 lg:mb-20">
+            <p
+              style={{
+                fontFamily: "'Huiwen-Fangsong', serif",
+                fontSize: 'clamp(15px, 1.4vw, 20px)',
+                lineHeight: 2,
+                fontWeight: 500,
+                color: '#555',
+                maxWidth: '720px'
+              }}
+            >
+              从地理空间到艺术场域，从古树年轮到人类文明，她以跨媒介实验创作，让每一件作品都成为连接自然与人文的桥梁。
+            </p>
+          </div>
+
+          {/* Flying Artist Cards */}
+          {[
+            {
+              groupName: '陈晓云',
+              medium: '媒介：跨媒介实验创作',
+              accentColor: '#7E79D6',
+              members: [
+                {
+                  name: '陈晓云',
+                  nameEn: 'Cevian Chen',
+                  bio: '中央美术学院硕士在读，持证森林康养师，器月森工作室主理人，跨学科艺术实践者与研究者。本科地理科学背景与央美艺术物质化研究结合，创作聚焦物质过程。运用GIS、风水、拓扑学，激活"僵尸媒介"，构建地球认知新范式。近五年深耕中国千年古树研究，以问题导向的生态干预，通过沉浸式装置显影生态智慧与文化记忆的共生。',
+                  image: '/images/residency/artists/cevian-chen/portrait.png'
+                }
+              ]
+            },
+            {
+              groupName: '何昌照',
+              medium: '媒介：架上绘画',
+              accentColor: '#6B8EC2',
+              members: [
+                {
+                  name: '何昌照',
+                  nameEn: 'Luca He',
+                  bio: '辽宁铁岭人。自幼喜爱绘画，艺考时期便对古典油画抱有浓厚兴趣。2012年，为系统学习古典油画艺术，赴意大利考入卡拉拉美术学院，2019年获油画系硕士学位后归国，现居成都，专注于艺术创作。2020年，在疫情期间开始探索不透明水彩创作，尝试为个人艺术语言拓展新的表达可能。2022年10月，在成都黑羊墙艺术空间举办首次个人展览《边界》；2024年4月，于贵阳巷子里咖啡厅呈现个展《记忆孤舟》，始终以创作回应自我与世界的联结。',
+                  image: '/images/residency/artists/luca-he/portrait.png'
+                }
+              ]
+            }
+          ].map((group) => (
+            <ArtistGroupCard
+              key={group.groupName}
+              {...group}
+            />
+          ))}
+        </div>
 
         {/* Bottom decoration */}
         <div className="flex justify-center mt-8 lg:mt-16">

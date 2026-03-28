@@ -210,7 +210,7 @@ const HeroSection = () => {
             {[
               { label: 'Location', value: 'China · Qionglai' },
               { label: 'Period', value: '2026.03.13 – 04.15' },
-              { label: 'Artists', value: '10 Groups Selected' }
+              { label: 'Artists', value: '10 Resident + 2 Flying' }
             ].map((item, index) => (
               <div key={index} className="flex items-baseline gap-4">
                 <span

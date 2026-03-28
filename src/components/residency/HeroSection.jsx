@@ -208,7 +208,7 @@ const HeroSection = () => {
             {[
               { label: '地点', value: '中国 · 四川 · 邛崃' },
               { label: '驻地周期', value: '2026.03.13 – 04.15' },
-              { label: '入选艺术家', value: '10 组' }
+              { label: '入选艺术家', value: '10组驻留 + 2位飞行' }
             ].map((item, index) => (
               <div key={index} className="flex items-baseline gap-4">
                 <span

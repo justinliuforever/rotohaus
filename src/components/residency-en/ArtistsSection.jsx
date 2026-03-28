@@ -85,7 +85,7 @@ const ArtistPortrait = ({ member, accentColor, solo = false }) => (
         lineHeight: 1.9,
         fontWeight: 300,
         color: '#666',
-        maxWidth: solo ? '520px' : '380px',
+        maxWidth: solo ? '580px' : '400px',
         margin: '0 auto'
       }}
     >
@@ -98,9 +98,9 @@ const ArtistGroupCard = ({ groupName, members, medium, accentColor }) => {
   const isSolo = members.length === 1;
 
   return (
-    <div className="mb-20 lg:mb-28">
+    <div className="mb-16 lg:mb-22">
       {/* Group / Artist name */}
-      <div className={`mb-10 lg:mb-14 ${isSolo ? 'text-center' : ''}`}>
+      <div className={`mb-8 lg:mb-10 ${isSolo ? 'text-center' : ''}`}>
         <h3
           style={{
             fontFamily: isSolo ? "'Instrument Serif', serif" : "'FZFengRuSong', serif",
@@ -172,7 +172,7 @@ const ArtistGroupCard = ({ groupName, members, medium, accentColor }) => {
       )}
 
       {/* Divider between groups */}
-      <div className="flex justify-center mt-16 lg:mt-20">
+      <div className="flex justify-center mt-12 lg:mt-16">
         <div className="flex items-center gap-3">
           <div className="w-12 h-px" style={{ background: `linear-gradient(to right, transparent, ${accentColor}20)` }} />
           <div className="w-1 h-1 rounded-full" style={{ background: `${accentColor}30` }} />
@@ -368,7 +368,7 @@ const ArtistsSection = () => {
                 className="text-[#392C20]/60 mt-2"
                 style={{
                   fontFamily: "'Helvetica Neue', sans-serif",
-                  fontSize: 'clamp(18px, 2vw, 36px)',
+                  fontSize: 'clamp(16px, 1.8vw, 28px)',
                   fontWeight: 200
                 }}
               >
@@ -401,6 +401,93 @@ const ArtistsSection = () => {
             {...group}
           />
         ))}
+
+        {/* ═══ Flying Artists Section ═══ */}
+        <div className="mt-16 lg:mt-28 mb-12 lg:mb-16">
+          {/* Category divider line */}
+          <div className="flex items-center gap-6 mb-12 lg:mb-16">
+            <div className="h-px flex-grow" style={{ background: 'linear-gradient(to right, transparent, #7E79D640, transparent)' }} />
+            <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#7E79D640' }} />
+            <div className="h-px flex-grow" style={{ background: 'linear-gradient(to left, transparent, #7E79D640, transparent)' }} />
+          </div>
+
+          {/* Flying Artists Header */}
+          <div className="mb-12 lg:mb-16">
+            <h2
+              className="text-[#392C20]"
+              style={{
+                fontFamily: "'Instrument Serif', serif",
+                fontSize: 'clamp(32px, 4vw, 60px)',
+                fontWeight: 400,
+                lineHeight: 1.15,
+                fontStyle: 'italic'
+              }}
+            >
+              Flying Artists
+            </h2>
+            <p
+              className="text-[#7E79D6]/70 mt-2"
+              style={{
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(16px, 1.8vw, 28px)',
+                fontWeight: 200
+              }}
+            >
+              2026 Cohort
+            </p>
+          </div>
+
+          {/* Flying Artists Manifesto */}
+          <div className="mb-14 lg:mb-20">
+            <p
+              style={{
+                fontFamily: "'Helvetica Neue', sans-serif",
+                fontSize: 'clamp(15px, 1.4vw, 20px)',
+                lineHeight: 1.9,
+                fontWeight: 300,
+                color: '#555',
+                maxWidth: '720px'
+              }}
+            >
+              From geographical space to artistic territory, from the annual rings of ancient trees to human civilization — through cross-media experimental creation, each work becomes a bridge connecting nature and humanity.
+            </p>
+          </div>
+
+          {/* Flying Artist Cards */}
+          {[
+            {
+              groupName: 'Cevian Chen',
+              medium: 'Medium: Cross-media Experimental Art',
+              accentColor: '#7E79D6',
+              members: [
+                {
+                  name: '陈晓云',
+                  nameEn: 'Cevian Chen',
+                  bio: 'MFA candidate at the Central Academy of Fine Arts, certified forest therapy guide, founder of Qi Yue Sen Studio, and interdisciplinary art practitioner and researcher. Combining an undergraduate background in geographical sciences with CAFA\'s research on art materialization, her practice focuses on material processes. Using GIS, feng shui, and topology, she activates "zombie media" to construct new paradigms of Earth cognition. Over the past five years, she has devoted herself to the study of China\'s millennium-old trees, employing problem-oriented ecological intervention through immersive installations that reveal the symbiosis of ecological wisdom and cultural memory.',
+                  image: '/images/residency/artists/cevian-chen/portrait.png'
+                }
+              ]
+            },
+            {
+              groupName: 'Luca He',
+              medium: 'Medium: Easel Painting',
+              accentColor: '#6B8EC2',
+              members: [
+                {
+                  name: '何昌照',
+                  nameEn: 'Luca He',
+                  bio: 'Born in Tieling, Liaoning. With a lifelong passion for painting and a deep interest in classical oil painting since his early art studies, he moved to Italy in 2012 to study at the Accademia di Belle Arti di Carrara, earning his MFA in Oil Painting in 2019 before returning to China. Now based in Chengdu, he dedicates himself to artistic creation. In 2020, during the pandemic, he began exploring gouache painting to expand his artistic language. His solo exhibitions include "Boundary" (2022, Black Sheep Wall Art Space, Chengdu) and "Memory Ark" (2024, Xiangzili Café, Guiyang), consistently responding through creation to the connection between self and world.',
+                  image: '/images/residency/artists/luca-he/portrait.png'
+                }
+              ]
+            }
+          ].map((group) => (
+            <ArtistGroupCard
+              key={group.groupName}
+              {...group}
+            />
+          ))}
+        </div>
 
         {/* Bottom decoration */}
         <div className="flex justify-center mt-8 lg:mt-16">
