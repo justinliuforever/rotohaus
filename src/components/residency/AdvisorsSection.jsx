@@ -35,7 +35,6 @@ const AdvisorCard = ({ description, image, delay = 0, align = 'left' }) => {
           />
         </motion.div>
 
-        {/* Description only */}
         <motion.div
           initial={{ opacity: 0, x: isRight ? 30 : -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -96,7 +95,6 @@ const AdvisorsSection = () => {
       <div className="paper-texture absolute inset-0" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12">
-        {/* Header */}
         <FadeInSection className="mb-16 lg:mb-24">
           <div className="flex items-start gap-6">
             <img

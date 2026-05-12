@@ -14,7 +14,6 @@ const ArtistsPage = () => {
     <div className="min-h-screen">
       <LanguageToggle />
 
-      {/* Back navigation */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

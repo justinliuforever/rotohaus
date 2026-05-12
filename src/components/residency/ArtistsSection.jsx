@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 const ArtistPortrait = ({ member, accentColor, solo = false }) => (
   <div className={solo ? 'max-w-lg mx-auto' : ''}>
 
-    {/* Portrait */}
     <div className={`flex justify-center ${solo ? 'mb-8' : 'mb-6'}`}>
       <motion.div
         className="relative"
@@ -74,7 +73,6 @@ const ArtistPortrait = ({ member, accentColor, solo = false }) => (
       </div>
     )}
 
-    {/* Bio */}
     <p
       className="text-center"
       style={{
@@ -97,7 +95,6 @@ const ArtistGroupCard = ({ groupName, members, medium, accentColor }) => {
 
   return (
     <div className="mb-16 lg:mb-22">
-      {/* Group / Artist name */}
       <div className={`mb-8 lg:mb-10 ${isSolo ? 'text-center' : ''}`}>
 
         <h3
@@ -147,7 +144,6 @@ const ArtistGroupCard = ({ groupName, members, medium, accentColor }) => {
         </div>
       </div>
 
-      {/* Members */}
       {isSolo ? (
         <ArtistPortrait
           member={members[0]}
@@ -338,7 +334,6 @@ const ArtistsSection = () => {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12">
-        {/* Section Header */}
         <div className="mb-16 lg:mb-24">
           <div className="flex items-start gap-6">
             <img

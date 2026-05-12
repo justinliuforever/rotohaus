@@ -3,7 +3,6 @@ import FadeInSection from '../shared/FadeInSection';
 const QAItem = ({ question, answer, subItems, delay = 0 }) => {
   return (
     <FadeInSection delay={delay} className="mb-12 lg:mb-16">
-      {/* Question */}
       <p
         className="text-[#959726] mb-4"
         style={{
@@ -17,7 +16,6 @@ const QAItem = ({ question, answer, subItems, delay = 0 }) => {
         {question}
       </p>
 
-      {/* Answer */}
       <p
         className="text-[#959726] pl-0 sm:pl-4 md:pl-6 lg:pl-8"
         style={{
@@ -114,17 +112,14 @@ const QASection = () => {
       <div className="paper-texture absolute inset-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12">
-        {/* Header with logo */}
         <FadeInSection className="mb-16 lg:mb-20">
           <div className="flex items-start gap-6">
-            {/* Logo */}
             <img
               src="/images/residency/application/logo-alt.png"
               alt="Rotohaus"
               className="w-24 h-24 lg:w-36 lg:h-36 opacity-90 flex-shrink-0"
             />
 
-            {/* Title */}
             <div>
               <h2
                 className="text-[#392C20]"
@@ -151,12 +146,10 @@ const QASection = () => {
           </div>
         </FadeInSection>
 
-        {/* Divider */}
         <FadeInSection delay={0.1} className="mb-12 lg:mb-16">
           <div className="h-px bg-gradient-to-r from-[#392C20]/20 via-[#392C20]/10 to-transparent" />
         </FadeInSection>
 
-        {/* QA Items */}
         {qaData.map((qa, i) => (
           <QAItem
             key={i}

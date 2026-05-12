@@ -80,7 +80,6 @@ const ApplySection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12">
 
-        {/* 招募已结束通知 */}
         <FadeInSection className="mb-16 lg:mb-20">
           <div className="bg-[#476724]/5 rounded-2xl lg:rounded-3xl p-8 lg:p-12 text-center">
             <p style={{ fontFamily: "'FZFengRuSong', serif", fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 400, color: '#392C20' }}>

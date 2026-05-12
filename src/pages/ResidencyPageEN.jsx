@@ -27,26 +27,22 @@ const ResidencyPageEN = () => {
       <LanguageToggle />
       <SideNavigation />
 
-      {/* Home - Hero, Intro, Info */}
       <div id="hero">
         <HeroSection />
         <IntroSection />
         <InfoSection />
       </div>
 
-      {/* Artists */}
       <div id="artists">
         <ArtistsPreview />
       </div>
 
-      {/* Venues - Three residency locations */}
       <div id="venues">
         <JiaguanSection />
         <QiongyaoSection />
         <LandianfangSection />
       </div>
 
-      {/* Process - Application related */}
       <div id="process">
         <ScheduleSection />
         <div id="requirements">
@@ -56,18 +52,15 @@ const ResidencyPageEN = () => {
         <ApplySection />
       </div>
 
-      {/* Q&A */}
       <div id="qa">
         <QASection />
       </div>
 
-      {/* Team - Advisors and Core Team */}
       <div id="team">
         <AdvisorsSection />
         <TeamSection />
       </div>
 
-      {/* About - Rotohaus and Thanks */}
       <div id="about">
         <RotohausSection />
         <HistorySection />

@@ -133,7 +133,6 @@ const Footer = () => {
                   </svg>
                   <span className="text-white/70">Rotohaus</span>
                 </li>
-                {/* 小红书 - only show for Chinese */}
                 {!isEnglish && (
                   <li className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-white/40 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">

@@ -26,7 +26,6 @@ const ArtistsPreview = () => {
       <div className="paper-texture absolute inset-0" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12">
-        {/* Section header */}
         <FadeInSection className="text-center mb-12 lg:mb-16">
           <h2
             className="text-[#392C20]"
@@ -128,7 +127,6 @@ const ArtistsPreview = () => {
           </div>
         </FadeInSection>
 
-        {/* CTA button */}
         <FadeInSection delay={0.2} className="text-center">
           <Link to="/residency/en/artists" className="inline-block">
             <motion.div

@@ -67,7 +67,6 @@ const TeamMemberCard = ({ name, nameEn, role, roleEn, description, image, delay 
           </div>
         </motion.div>
 
-        {/* Description */}
         <motion.div
           initial={{ opacity: 0, x: isRight ? 30 : -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -137,7 +136,6 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
         </div>
       </motion.div>
 
-      {/* Content */}
       <div className={`flex flex-col ${isRight ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 md:gap-8 lg:gap-12 items-start`}>
         {/* Avatar and Name */}
         <motion.div
@@ -178,7 +176,6 @@ const CreativeTeamCard = ({ role, roleEn, name, nameEn, description, image, dela
           </div>
         </motion.div>
 
-        {/* Description */}
         <motion.div
           initial={{ opacity: 0, x: isRight ? 30 : -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -312,7 +309,6 @@ const TeamSection = () => {
           />
         ))}
 
-        {/* Divider */}
         <FadeInSection delay={0.2} className="flex justify-center my-16 lg:my-24">
           <div className="flex items-center gap-4">
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#392C20]/15 to-transparent" />

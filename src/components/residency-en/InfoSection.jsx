@@ -59,7 +59,6 @@ const InfoSection = () => {
 
   const decorY = useTransform(scrollYProgress, [0, 1], ['10%', '-10%']);
 
-  // SVG icon components
   const icons = {
     location: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">

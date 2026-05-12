@@ -24,7 +24,6 @@ const SideNavigation = () => {
 
       setIsVisible(scrollY > windowHeight * 0.5);
 
-      // Determine active section
       const sectionElements = sections.map(s => ({
         id: s.id,
         element: document.getElementById(s.id)
@@ -83,7 +82,6 @@ const SideNavigation = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Progress indicator */}
               <div className="flex items-center gap-1">
                 {sections.map((section, i) => (
                   <motion.div
@@ -99,7 +97,6 @@ const SideNavigation = () => {
                 ))}
               </div>
 
-              {/* Current section label */}
               <span
                 className="text-[#392C20] text-sm font-medium ml-1"
                 style={{ fontFamily: "'Huiwen-Fangsong', serif" }}
@@ -107,7 +104,6 @@ const SideNavigation = () => {
                 {currentSection?.label}
               </span>
 
-              {/* Expand icon */}
               <motion.svg
                 className="w-3.5 h-3.5 text-[#392C20]/40"
                 fill="none"
@@ -143,12 +139,10 @@ const SideNavigation = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.03 }}
                     >
-                      {/* Active indicator */}
                       <div className={`w-1.5 h-1.5 rounded-full transition-colors ${
                         activeSection === section.id ? 'bg-[#476724]' : 'bg-[#392C20]/20'
                       }`} />
 
-                      {/* Labels */}
                       <div className="flex-1">
                         <span
                           className={`block text-sm transition-colors ${
@@ -163,7 +157,6 @@ const SideNavigation = () => {
                         </span>
                       </div>
 
-                      {/* Current indicator */}
                       {activeSection === section.id && (
                         <motion.div
                           layoutId="currentIndicator"

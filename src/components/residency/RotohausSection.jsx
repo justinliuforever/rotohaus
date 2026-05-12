@@ -43,7 +43,6 @@ const RotohausSection = () => {
                 />
               </motion.div>
 
-              {/* Title */}
               <h2
                 className="text-[#392C20] mb-4"
                 style={{
@@ -74,7 +73,6 @@ const RotohausSection = () => {
 
           {/* Right column - Content */}
           <div className="lg:col-span-7">
-            {/* Subtitle */}
             <FadeInSection delay={0.1} className="mb-8 lg:mb-12">
               <h3
                 className="text-[#959726] lg:text-right"
@@ -118,7 +116,6 @@ const RotohausSection = () => {
               </p>
             </FadeInSection>
 
-            {/* Decorative element */}
             <FadeInSection delay={0.35} className="mt-10 flex items-center gap-4">
               <div className="flex-1 h-px bg-gradient-to-r from-[#959726]/30 to-transparent" />
               <div className="w-2 h-2 rounded-full bg-[#959726]/40" />

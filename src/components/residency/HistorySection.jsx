@@ -36,7 +36,6 @@ const ProjectCard = ({
           transition={{ duration: 0.9, delay: delay + 0.1, ease: [0.16, 1, 0.3, 1] }}
           className={`relative ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
         >
-          {/* Main image */}
           <motion.div
             whileHover={{ y: -8 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -106,9 +105,7 @@ const ProjectCard = ({
             </motion.div>
           )}
 
-          {/* Title area */}
           <div className={`mb-8 ${reverse ? 'lg:text-right' : ''}`}>
-            {/* Accent line */}
             <motion.div
               initial={{ scaleX: 0 }}
               animate={isInView ? { scaleX: 1 } : {}}
@@ -144,7 +141,6 @@ const ProjectCard = ({
               </motion.h3>
             )}
 
-            {/* Subtitle (Chinese) */}
             {subtitle && (
               <motion.p
                 initial={{ opacity: 0 }}
@@ -162,7 +158,6 @@ const ProjectCard = ({
               </motion.p>
             )}
 
-            {/* English subtitle */}
             {titleEn && (
               <motion.p
                 initial={{ opacity: 0 }}
@@ -183,7 +178,6 @@ const ProjectCard = ({
             )}
           </div>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -254,7 +248,6 @@ const HistorySection = () => {
       </motion.div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12">
-        {/* Intro text */}
         <FadeInSection className="max-w-3xl mx-auto text-center mb-20 lg:mb-32">
           <p
             className="text-black/25"
@@ -269,7 +262,6 @@ const HistorySection = () => {
           </p>
         </FadeInSection>
 
-        {/* Project cards */}
         {projects.map((project, i) => (
           <ProjectCard
             key={i}
@@ -279,7 +271,6 @@ const HistorySection = () => {
           />
         ))}
 
-        {/* Footer note */}
         <FadeInSection delay={0.2} className="max-w-2xl mx-auto text-center mt-8 lg:mt-16">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="w-12 h-px bg-[#392C20]/10" />
